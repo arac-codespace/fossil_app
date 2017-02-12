@@ -12,6 +12,13 @@ Kingdom.create(kingdom_name: 'Protozoa')
 
 # Phylum table
 Phylum.create(phylum_name: 'Mollusca', kingdom_id: 1)
+Phylum.create(phylum_name: 'Brachiopoda', kingdom_id: 1)
 Phylum.create(phylum_name: 'Foraminifera', kingdom_id: 2)
 Phylum.create(phylum_name: 'Sarcomastigophora', kingdom_id: 2)
-Phylum.create(phylum_name: 'brachiopoda', kingdom_id: 1)
+
+#  Class table
+FossilClass.create(class_name: 'Bivalvia', kingdom_id: 1, phylum_id: 1)
+FossilClass.create(class_name: 'Cephalopoda', kingdom_id: 1, phylum_id: 1)
+FossilClass.create(class_name: 'Rhizopoda', kingdom_id: 2, phylum_id: 4)
+
+

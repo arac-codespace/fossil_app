@@ -15,8 +15,14 @@
     
     <div class = "form-group">
         <%= f.label :phylum_id %>
-        <%= f.grouped_collection_select(:phylum_id, Kingdom.order(:kingdom_name), :phylums, :kingdom_name, :id, :phylum_name, include_blank: true) %>    
-    </div>     
+        <%= f.grouped_collection_select(:phylum_id, Kingdom.order(:kingdom_name), :phylums, :kingdom_name, :id, :phylum_name) %>    
+    </div>
+        
+    <div class = "form-group">
+        <%= f.label :class_id %>
+        <%= f.grouped_collection_select(:class_id, Phylum.order(:phylum_name), :fossil_classes, :phylum_name, :id, :class_name) %>    
+        <!--%= f.collection_select(:class_id, FossilClass.order(:class_name), :id, :class_name, include_blank: true) %>    -->
+    </div>       
     
     <div class = "form-group">
         <%= f.label :remarks %>
