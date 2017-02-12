@@ -10,12 +10,12 @@
     
     <div class = "form-group">
         <%= f.label :kingdom_id %>
-        <%= f.collection_select(:kingdom_id, Kingdom.order(:kingdom_name), :id, :kingdom_name) %>    
+        <%= f.collection_select(:kingdom_id, Kingdom.order(:kingdom_name), :id, :kingdom_name, include_blank: true) %>    
     </div> 
     
     <div class = "form-group">
         <%= f.label :phylum_id %>
-        <%= f.grouped_collection_select(:phylum_id, Kingdom.order(:kingdom_name), :phylums, :kingdom_name, :id, :phylum_name) %>    
+        <%= f.grouped_collection_select(:phylum_id, Kingdom.order(:kingdom_name), :phylums, :kingdom_name, :id, :phylum_name, include_blank: true) %>    
     </div>     
     
     <div class = "form-group">

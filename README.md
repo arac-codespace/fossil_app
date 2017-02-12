@@ -12,6 +12,7 @@ This piece of code limits the options with kingdom_id as a condition.
     <!--</div>     -->
     
 This code filters the lower field in accord with its relationship with the first field.
+https://www.youtube.com/watch?v=j1zZ4Lgzf9s
 http://api.rubyonrails.org/classes/ActionView/Helpers/FormOptionsHelper.html
     
     <!--<div class = "form-group">-->
