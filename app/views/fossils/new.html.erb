@@ -1,0 +1,45 @@
+<h1> Form for creating a new post!</h1>
+<!--multipart is for file upload! -->
+<!--:html => { :multipart => true }-->
+<%= form_for @fossil, url: fossils_path do |f| %>
+
+    <div class = "form-group">
+        <%= f.label :species_name %>
+        <%= f.text_field :species_name, class: 'form-control' %>
+    </div>
+    
+    <div class = "form-group">
+        <%= f.label :kingdom_id %>
+        <%= f.collection_select(:kingdom_id, Kingdom.all, :id, :kingdom_name) %>    
+    </div> 
+    
+    <div class = "form-group">
+        <%= f.label :remarks %>
+        <%= f.text_area :remarks, class: "form-control" %>
+    </div>
+    
+    <div class = "form-group">
+        <%= f.label :env_int %>
+        <%= f.text_area :env_int, class: "form-control" %>
+    </div>    
+    
+    <div class = "form-group">
+        <%= f.label :summary %>
+        <%= f.text_area :summary, class: "form-control" %>
+    </div>       
+    
+    <div class = "form-group">
+        <%= f.label :age_range %>
+        <%= f.text_area :age_range, class: "form-control" %>
+    </div>        
+    
+    <div class = "form-group">
+        <%= f.label :author %>
+        <%= f.text_area :author, class: "form-control" %>
+    </div>        
+    
+    <div class = "form-group">
+        <%= f.submit "Add new Fossil", class: 'btn btn-primary' %>
+    </div>
+    
+<% end %>
