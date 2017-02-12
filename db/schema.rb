@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170211185939) do
+ActiveRecord::Schema.define(version: 20170212034114) do
 
   create_table "fossils", force: :cascade do |t|
     t.integer  "kingdom_id"
@@ -31,6 +31,11 @@ ActiveRecord::Schema.define(version: 20170211185939) do
 
   create_table "kingdoms", force: :cascade do |t|
     t.string "kingdom_name"
+  end
+
+  create_table "phylums", force: :cascade do |t|
+    t.integer "kingdom_id"
+    t.string  "phylum_name"
   end
 
 end

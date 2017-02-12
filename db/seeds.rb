@@ -9,3 +9,9 @@
 # Kingdom table
 Kingdom.create(kingdom_name: 'Animalia')
 Kingdom.create(kingdom_name: 'Protozoa')
+
+# Phylum table
+Phylum.create(phylum_name: 'Mollusca', kingdom_id: 1)
+Phylum.create(phylum_name: 'Foraminifera', kingdom_id: 2)
+Phylum.create(phylum_name: 'Sarcomastigophora', kingdom_id: 2)
+Phylum.create(phylum_name: 'brachiopoda', kingdom_id: 1)
