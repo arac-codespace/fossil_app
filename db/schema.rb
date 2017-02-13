@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170212182636) do
   create_table "fossils", force: :cascade do |t|
     t.integer  "kingdom_id"
     t.integer  "phylum_id"
-    t.integer  "class_id"
+    t.integer  "fossil_class_id"
     t.integer  "order_id"
     t.integer  "family_id"
     t.integer  "genus_id"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20170212182636) do
     t.text     "remarks"
     t.string   "age_range"
     t.string   "author"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "kingdoms", force: :cascade do |t|

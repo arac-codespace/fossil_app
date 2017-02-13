@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
     create_table :fossils do |t|
       t.integer   :kingdom_id
       t.integer :phylum_id
-      t.integer :class_id
+      t.integer :fossil_class_id
       t.integer :order_id
       t.integer :family_id
       t.integer :genus_id

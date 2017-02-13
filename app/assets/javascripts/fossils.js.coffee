@@ -1,4 +1,4 @@
-jQuery ->
+$(document).on "turbolinks:load", ->
 	
 	# Hide forms when page loaded
 	$('#fossil_phylum_id').parent().hide()
