@@ -26,7 +26,8 @@ class FossilsController < ApplicationController
   private
   
   def fossil_params
-      params.require(:fossil).permit(:kingdom_id, :phylum_id, :fossil_class_id, :order_id, :family_id, :genera_id, :summary, :remarks, :species_name, :env_int, :author, :age_range)
+      paras_allow = :kingdom_id, :phylum_id, :fossil_class_id, :order_id, :family_id, :genera_id, :summary, :remarks, :species_name, :env_int, :author, :age_range, :avatar
+      params.require(:fossil).permit(paras_allow)
   end  
   
 end

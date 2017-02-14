@@ -1,70 +1,74 @@
 <h1> Form for creating a new post!</h1>
 <!--multipart is for file upload! -->
-<!--:html => { :multipart => true }-->
-<%= form_for @fossil, url: fossils_path do |f| %>
+<%= form_for @fossil, url: fossils_path, :html => { :multipart => true } do |f| %>
 
-    <div class = "form-group">
-        <%= f.label :species_name %>
-        <%= f.text_field :species_name, class: 'form-control' %>
-    </div>
-    
-    <div class = "form-group">
-        <%= f.label :kingdom_id %>
-        <%= f.collection_select(:kingdom_id, Kingdom.order(:kingdom_name), :id, :kingdom_name, include_blank: true) %>    
-    </div> 
-    
-    <div class = "form-group">
-        <%= f.label :phylum_id %>
-        <%= f.grouped_collection_select(:phylum_id, Kingdom.order(:kingdom_name), :phylums, :kingdom_name, :id, :phylum_name) %>    
-    </div>
-        
-    <div class = "form-group">
-        <%= f.label :fossil_class_id %>
-        <%= f.grouped_collection_select(:fossil_class_id, Phylum.order(:phylum_name), :fossil_classes, :phylum_name, :id, :class_name) %>    
-    </div>  
-    
-    <div class = "form-group">
-        <%= f.label :order_id %>
-        <%= f.grouped_collection_select(:order_id, FossilClass.order(:class_name), :orders, :class_name, :id, :order_name) %>    
-    </div> 
-    
-    <div class = "form-group">
-        <%= f.label :family_id %>
-        <%= f.grouped_collection_select(:family_id, Order.order(:order_name), :families, :order_name, :id, :family_name) %>    
-    </div>        
+  <div class = "form-group">
+    <%= f.label :species_name %>
+    <%= f.text_field :species_name, class: 'form-control' %>
+  </div>
+  
+  <div class = "form-group">
+    <%= f.label :kingdom_id %>
+    <%= f.collection_select(:kingdom_id, Kingdom.order(:kingdom_name), :id, :kingdom_name, include_blank: true) %>    
+  </div> 
+  
+  <div class = "form-group">
+    <%= f.label :phylum_id %>
+    <%= f.grouped_collection_select(:phylum_id, Kingdom.order(:kingdom_name), :phylums, :kingdom_name, :id, :phylum_name) %>    
+  </div>
+      
+  <div class = "form-group">
+    <%= f.label :fossil_class_id %>
+    <%= f.grouped_collection_select(:fossil_class_id, Phylum.order(:phylum_name), :fossil_classes, :phylum_name, :id, :class_name) %>    
+  </div>  
+  
+  <div class = "form-group">
+    <%= f.label :order_id %>
+    <%= f.grouped_collection_select(:order_id, FossilClass.order(:class_name), :orders, :class_name, :id, :order_name) %>    
+  </div> 
+  
+  <div class = "form-group">
+    <%= f.label :family_id %>
+    <%= f.grouped_collection_select(:family_id, Order.order(:order_name), :families, :order_name, :id, :family_name) %>    
+  </div>        
 
-    <div class = "form-group">
-        <%= f.label :genera_id %>
-        <%= f.grouped_collection_select(:genera_id, Family.order(:family_name), :generas, :family_name, :id, :genus_name) %>    
-    </div>  
-    
-    <div class = "form-group">
-        <%= f.label :remarks %>
-        <%= f.text_area :remarks, class: "form-control" %>
-    </div>
-    
-    <div class = "form-group">
-        <%= f.label :env_int %>
-        <%= f.text_area :env_int, class: "form-control" %>
-    </div>    
-    
-    <div class = "form-group">
-        <%= f.label :summary %>
-        <%= f.text_area :summary, class: "form-control" %>
-    </div>       
-    
-    <div class = "form-group">
-        <%= f.label :age_range %>
-        <%= f.text_area :age_range, class: "form-control" %>
-    </div>        
-    
-    <div class = "form-group">
-        <%= f.label :author %>
-        <%= f.text_area :author, class: "form-control" %>
-    </div>        
-    
-    <div class = "form-group">
-        <%= f.submit "Add new Fossil", class: 'btn btn-primary' %>
-    </div>
-    
+  <div class = "form-group">
+    <%= f.label :genera_id %>
+    <%= f.grouped_collection_select(:genera_id, Family.order(:family_name), :generas, :family_name, :id, :genus_name) %>    
+  </div>
+  
+  <div class = "form-group">
+    <%= f.label :summary %>
+    <%= f.text_area :summary, class: "form-control" %>
+  </div>    
+  
+  <div class = "form-group">
+    <%= f.label :age_range %>
+    <%= f.text_area :age_range, class: "form-control" %>
+  </div>  
+  
+  <div class = "form-group">
+    <%= f.label :author %>
+    <%= f.text_area :author, class: "form-control" %>
+  </div>  
+  
+  <div class = "form-group">
+    <%= f.label :remarks %>
+    <%= f.text_area :remarks, class: "form-control" %>
+  </div>
+  
+  <div class = "form-group">
+    <%= f.label :env_int %>
+    <%= f.text_area :env_int, class: "form-control" %>
+  </div>    
+  
+  <div class = "form-group">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar, class: 'form-control' %> 
+  </div>
+  
+  <div class = "form-group">
+    <%= f.submit "Add new Fossil", class: 'btn btn-primary' %>
+  </div>
+  
 <% end %>

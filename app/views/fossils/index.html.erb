@@ -2,19 +2,22 @@
 
 
 <% @fossils.each do |f| %>
-    <h3> Name </h3>
+  
+  <h3> Name </h3>
+  <%= link_to f do %>
     <%= f.species_name %>
-    <h3> Kingdom </h3>
-    <%= f.kingdom.kingdom_name %>
-    <h3> Phylum </h3>
-    <%= f.phylum.phylum_name %>
-    <h3> Class </h3>
-    <%= f.fossil_class.class_name %>
-    <h3> Order </h3>
-    <%= f.order.order_name%>
-    <h3> Family </h3>
-    <%= f.family.family_name%> 
-    <h3> Genus </h3>
-    <%= f.genera.genus_name%>     
+  <% end %> 
+  <h3> Kingdom </h3>
+  <%= f.kingdom.kingdom_name %>
+  <h3> Phylum </h3>
+  <%= f.phylum.phylum_name %>
+  <h3> Class </h3>
+  <%= f.fossil_class.class_name %>
+  <h3> Order </h3>
+  <%= f.order.order_name%>
+  <h3> Family </h3>
+  <%= f.family.family_name%> 
+  <h3> Genus </h3>
+  <%= f.genera.genus_name%>     
 
 <% end %>

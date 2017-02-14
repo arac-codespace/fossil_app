@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170214063829) do
+ActiveRecord::Schema.define(version: 20170214071125) do
 
   create_table "families", force: :cascade do |t|
     t.string  "family_name"
@@ -39,8 +39,12 @@ ActiveRecord::Schema.define(version: 20170214063829) do
     t.text     "remarks"
     t.string   "age_range"
     t.string   "author"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "generas", force: :cascade do |t|
