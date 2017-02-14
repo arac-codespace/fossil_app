@@ -4,4 +4,5 @@ class Phylum < ActiveRecord::Base
   has_many :fossil_classes
   has_many :orders
   has_many :families
+  has_many :generas
 end

@@ -6,7 +6,7 @@ class CreateFossils < ActiveRecord::Migration[5.0]
       t.integer :fossil_class_id
       t.integer :order_id
       t.integer :family_id
-      t.integer :genus_id
+      t.integer :genera_id
       t.string :species_name
       t.text :summary
       t.text :env_int

@@ -32,6 +32,11 @@
         <%= f.label :family_id %>
         <%= f.grouped_collection_select(:family_id, Order.order(:order_name), :families, :order_name, :id, :family_name) %>    
     </div>        
+
+    <div class = "form-group">
+        <%= f.label :genera_id %>
+        <%= f.grouped_collection_select(:genera_id, Family.order(:family_name), :generas, :family_name, :id, :genus_name) %>    
+    </div>  
     
     <div class = "form-group">
         <%= f.label :remarks %>

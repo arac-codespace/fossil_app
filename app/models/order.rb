@@ -4,5 +4,6 @@ class Order < ActiveRecord::Base
   belongs_to :fossil_class       
   has_many :families
   has_many :fossils
+  has_many :generas
 
 end

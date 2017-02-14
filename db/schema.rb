@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170214052138) do
+ActiveRecord::Schema.define(version: 20170214063829) do
 
   create_table "families", force: :cascade do |t|
     t.string  "family_name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20170214052138) do
     t.integer  "fossil_class_id"
     t.integer  "order_id"
     t.integer  "family_id"
-    t.integer  "genus_id"
+    t.integer  "genera_id"
     t.string   "species_name"
     t.text     "summary"
     t.text     "env_int"
@@ -41,6 +41,15 @@ ActiveRecord::Schema.define(version: 20170214052138) do
     t.string   "author"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "generas", force: :cascade do |t|
+    t.string  "genus_name"
+    t.integer "kingdom_id"
+    t.integer "phylum_id"
+    t.integer "fossil_class_id"
+    t.integer "order_id"
+    t.integer "family_id"
   end
 
   create_table "kingdoms", force: :cascade do |t|

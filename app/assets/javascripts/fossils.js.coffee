@@ -5,6 +5,7 @@ $(document).on "turbolinks:load", ->
 	$('#fossil_fossil_class_id').parent().hide()
 	$('#fossil_order_id').parent().hide()
 	$('#fossil_family_id').parent().hide()
+	$('#fossil_genera_id').parent().hide()
 	
 		
 	# Assign item values to vars 
@@ -12,6 +13,7 @@ $(document).on "turbolinks:load", ->
 	fossil_class = $('#fossil_fossil_class_id').html()
 	orders = $('#fossil_order_id').html()
 	families = $('#fossil_family_id').html()
+	genus = $('#fossil_genera_id').html()
 
 	# Default option select
 	blank = '<option selected="selected"></option>'
@@ -37,6 +39,8 @@ $(document).on "turbolinks:load", ->
 			$('#fossil_order_id').empty()
 			$('#fossil_family_id').parent().hide()				
 			$('#fossil_family_id').empty()	
+			$('#fossil_genera_id').parent().hide()				
+			$('#fossil_genera_id').empty()				
 			
 		# If no matching labels->phylums from options is selected...
 		else
@@ -49,7 +53,8 @@ $(document).on "turbolinks:load", ->
 			$('#fossil_order_id').empty()		
 			$('#fossil_family_id').parent().hide()				
 			$('#fossil_family_id').empty()				
-			
+			$('#fossil_genera_id').parent().hide()				
+			$('#fossil_genera_id').empty()			
 
 			
 			
@@ -64,14 +69,18 @@ $(document).on "turbolinks:load", ->
 			$('#fossil_order_id').parent().hide()				
 			$('#fossil_order_id').empty()	
 			$('#fossil_family_id').parent().hide()				
-			$('#fossil_family_id').empty()				
+			$('#fossil_family_id').empty()
+			$('#fossil_genera_id').parent().hide()				
+			$('#fossil_genera_id').empty()			
 		else
 			$('#fossil_fossil_class_id').empty()
 			$('#fossil_fossil_class_id').parent().hide()
 			$('#fossil_order_id').parent().hide()				
 			$('#fossil_order_id').empty()	
 			$('#fossil_family_id').parent().hide()				
-			$('#fossil_family_id').empty()				
+			$('#fossil_family_id').empty()
+			$('#fossil_genera_id').parent().hide()				
+			$('#fossil_genera_id').empty()			
 			
 			
 	# When class select field is changed... show order options
@@ -83,12 +92,16 @@ $(document).on "turbolinks:load", ->
 			$('#fossil_order_id').html(options).prepend(blank)
 			$('#fossil_order_id').parent().show()
 			$('#fossil_family_id').parent().hide()				
-			$('#fossil_family_id').empty()				
+			$('#fossil_family_id').empty()
+			$('#fossil_genera_id').parent().hide()				
+			$('#fossil_genera_id').empty()			
 		else
 			$('#fossil_order_id').empty()
 			$('#fossil_order_id').parent().hide()		
 			$('#fossil_family_id').parent().hide()				
-			$('#fossil_family_id').empty()				
+			$('#fossil_family_id').empty()	
+			$('#fossil_genera_id').parent().hide()				
+			$('#fossil_genera_id').empty()			
 			
 	# When order select field is changed... show family options
 	$('#fossil_order_id').change ->
@@ -98,6 +111,23 @@ $(document).on "turbolinks:load", ->
 		if options
 			$('#fossil_family_id').html(options).prepend(blank)
 			$('#fossil_family_id').parent().show()
+			$('#fossil_genera_id').parent().hide()				
+			$('#fossil_genera_id').empty()			
 		else
 			$('#fossil_family_id').empty()
-			$('#fossil_family_id').parent().hide()						
+			$('#fossil_family_id').parent().hide()
+			$('#fossil_genera_id').parent().hide()				
+			$('#fossil_genera_id').empty()			
+			
+			
+	# When family select field is changed... show genus options
+	$('#fossil_family_id').change ->
+		selected_family = $('#fossil_family_id :selected').text()
+		escaped_family = selected_family.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+		options = $(genus).filter("optgroup[label='#{escaped_family}']").html()
+		if options
+			$('#fossil_genera_id').html(options).prepend(blank)
+			$('#fossil_genera_id').parent().show()
+		else
+			$('#fossil_genera_id').empty()
+			$('#fossil_genera_id').parent().hide()				

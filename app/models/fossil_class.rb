@@ -4,4 +4,5 @@ class FossilClass < ActiveRecord::Base
   has_many :fossils
   has_many :orders
   has_many :families
+  has_many :generas
 end
