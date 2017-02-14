@@ -26,7 +26,12 @@
     <div class = "form-group">
         <%= f.label :order_id %>
         <%= f.grouped_collection_select(:order_id, FossilClass.order(:class_name), :orders, :class_name, :id, :order_name) %>    
-    </div>    
+    </div> 
+    
+    <div class = "form-group">
+        <%= f.label :family_id %>
+        <%= f.grouped_collection_select(:family_id, Order.order(:order_name), :families, :order_name, :id, :family_name) %>    
+    </div>        
     
     <div class = "form-group">
         <%= f.label :remarks %>

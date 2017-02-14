@@ -99,3 +99,58 @@ order_list = [
 order_list.each do |x|
   Order.create x
 end
+
+# Family table
+
+family_list = [
+
+{family_name: "Pholadidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 1, order_id: 1},
+{family_name: "Veneridae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 1, order_id: 2},
+{family_name: "Radiolitidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 1, order_id: 3},
+{family_name: "Gryphaeidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 1, order_id: 4},
+{family_name: "Teredinidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 1, order_id: 1},
+{family_name: "Veneridae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 1, order_id: 5},
+{family_name: "Ostreidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 1, order_id: 4},
+{family_name: "Spondylidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 1, order_id: 6},
+
+{family_name: "Athyrididae", kingdom_id: 1, phylum_id: 2, fossil_class_id: 2, order_id: 7},
+{family_name: "Atrypidae", kingdom_id: 1, phylum_id: 2, fossil_class_id: 2, order_id: 2},
+{family_name: "Camarotoechiidae", kingdom_id: 1, phylum_id: 2, fossil_class_id: 2, order_id: 9},
+{family_name: "Spiriferidae", kingdom_id: 1, phylum_id: 2, fossil_class_id: 2, order_id: 9},
+
+{family_name: "Belemnitidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 3, order_id: 10},
+{family_name: "Eutrephoceratidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 3, order_id: 11},
+{family_name: "Kosmoceratidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 3, order_id: 12},
+{family_name: "Nautilidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 3, order_id: 11},
+
+{family_name: "Clypeasteridae", kingdom_id: 1, phylum_id: 3, fossil_class_id: 4, order_id: 12 },
+{family_name: "Holasteridae", kingdom_id: 1, phylum_id: 3, fossil_class_id: 4, order_id: 14 },
+{family_name: "Brissidae", kingdom_id: 1, phylum_id: 3, fossil_class_id: 4, order_id: 15 },
+{family_name: "Eucalyptocrinitidae", kingdom_id: 1, phylum_id: 3, fossil_class_id: 5, order_id: 16},
+{family_name: "Hemicidaridae", kingdom_id: 1, phylum_id: 3, fossil_class_id: 4, order_id: 17 },
+{family_name: "Micrasteridae", kingdom_id: 1, phylum_id: 3, fossil_class_id: 4, order_id: 15},
+{family_name: "Phanocrinidae", kingdom_id: 1, phylum_id: 3, fossil_class_id: 5, order_id: 18},
+{family_name: "Phymosomatidae", kingdom_id: 1, phylum_id: 3, fossil_class_id: 4, order_id: 19},
+{family_name: "Platycrinitidae", kingdom_id: 1, phylum_id: 3, fossil_class_id: 5, order_id: 16},
+
+{family_name: "Globigerinidae", kingdom_id: 2, phylum_id: 4, fossil_class_id: 7, order_id: 20},
+{family_name: "Lepidocyclinidae", kingdom_id: 2, phylum_id: 4, fossil_class_id: 7, order_id: 20},
+{family_name: "Miliolidae", kingdom_id: 2, phylum_id: 4, fossil_class_id: 8, order_id: 21},
+
+{family_name: "Camaenidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 9, order_id: 21},
+{family_name: "Cerithiidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 9, order_id: 23},
+{family_name: "Fasciolariidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 9, order_id: 24},
+{family_name: "Muricidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 9, order_id: 25},
+{family_name: "Nertitidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 9, order_id: 26},
+{family_name: "Volutidae", kingdom_id: 1, phylum_id: 1, fossil_class_id: 9, order_id: 25},
+
+{family_name: "Alokistocaridae", kingdom_id: 1, phylum_id: 6, fossil_class_id: 10, order_id:27 },
+{family_name: "Calymenidae", kingdom_id: 1, phylum_id: 6, fossil_class_id: 10, order_id:28 },
+{family_name: "Aulacopleuridae", kingdom_id: 1, phylum_id: 6, fossil_class_id: 10, order_id:29 },
+{family_name: "Phacopidae", kingdom_id: 1, phylum_id: 6, fossil_class_id: 10, order_id:28 },
+{family_name: "Olenidae", kingdom_id: 1, phylum_id: 6, fossil_class_id: 10, order_id:27 }
+]
+
+family_list.each do |x|
+  Family.create x
+end

@@ -3,4 +3,5 @@ class FossilClass < ActiveRecord::Base
   belongs_to :phylum
   has_many :fossils
   has_many :orders
+  has_many :families
 end
