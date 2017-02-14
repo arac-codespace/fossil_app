@@ -2,9 +2,15 @@
 
 
 <% @fossils.each do |f| %>
+    <h3> Name </h3>
     <%= f.species_name %>
+    <h3> Kingdom </h3>
     <%= f.kingdom.kingdom_name %>
+    <h3> Phylum </h3>
     <%= f.phylum.phylum_name %>
+    <h3> Class </h3>
     <%= f.fossil_class.class_name %>
+    <h3> Order </h3>
+    <%= f.order.order_name%>
 
 <%end%>

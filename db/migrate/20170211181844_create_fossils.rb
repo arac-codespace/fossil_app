@@ -1,4 +1,4 @@
-class CreatePosts < ActiveRecord::Migration[5.0]
+class CreateFossils < ActiveRecord::Migration[5.0]
   def change
     create_table :fossils do |t|
       t.integer   :kingdom_id

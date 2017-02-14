@@ -3,10 +3,12 @@ $(document).on "turbolinks:load", ->
 	# Hide forms when page loaded
 	$('#fossil_phylum_id').parent().hide()
 	$('#fossil_fossil_class_id').parent().hide()
-	
+	$('#fossil_order_id').parent().hide()
+		
 	# Assign item values to vars 
 	phylums = $('#fossil_phylum_id').html()
 	fossil_class = $('#fossil_fossil_class_id').html()
+	orders = $('#fossil_order_id').html()
 	
 	# Default option select
 	blank = '<option selected="selected"></option>'
@@ -28,6 +30,9 @@ $(document).on "turbolinks:load", ->
 			# Hide any previously opened child fields and empty its contents
 			$('#fossil_fossil_class_id').parent().hide()				
 			$('#fossil_fossil_class_id').empty()
+			$('#fossil_order_id').parent().hide()				
+			$('#fossil_order_id').empty()
+	
 			
 		# If no matching labels->phylums from options is selected...
 		else
@@ -35,12 +40,14 @@ $(document).on "turbolinks:load", ->
 			$('#fossil_phylum_id').empty()
 			$('#fossil_phylum_id').parent().hide()
 			$('#fossil_fossil_class_id').empty()
-			$('#fossil_fossil_class_id').parent().hide()						
+			$('#fossil_fossil_class_id').parent().hide()	
+			$('#fossil_order_id').parent().hide()				
+			$('#fossil_order_id').empty()			
 			
 
 			
 			
-
+	# When phylum select field is changed...
 	$('#fossil_phylum_id').change ->
 		selected_phylum = $('#fossil_phylum_id :selected').text()
 		escaped_phylum = selected_phylum.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
@@ -48,6 +55,23 @@ $(document).on "turbolinks:load", ->
 		if options
 			$('#fossil_fossil_class_id').html(options).prepend(blank)
 			$('#fossil_fossil_class_id').parent().show()
+			$('#fossil_order_id').parent().hide()				
+			$('#fossil_order_id').empty()	
 		else
 			$('#fossil_fossil_class_id').empty()
-			$('#fossil_fossil_class_id').parent().hide()			
+			$('#fossil_fossil_class_id').parent().hide()
+			$('#fossil_order_id').parent().hide()				
+			$('#fossil_order_id').empty()	
+			
+			
+	# When class select field is changed...
+	$('#fossil_fossil_class_id').change ->
+		selected_class = $('#fossil_fossil_class_id :selected').text()
+		escaped_class = selected_class.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+		options = $(orders).filter("optgroup[label='#{escaped_class}']").html()
+		if options
+			$('#fossil_order_id').html(options).prepend(blank)
+			$('#fossil_order_id').parent().show()
+		else
+			$('#fossil_order_id').empty()
+			$('#fossil_order_id').parent().hide()			
