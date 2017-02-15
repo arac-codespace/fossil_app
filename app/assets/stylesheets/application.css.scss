@@ -18,3 +18,206 @@
 @import 'bootstrap';
 @import 'font-awesome';
 @import 'font-awesome-sprockets';
+
+
+// Margin when sidebar is active and inactive.
+.row{
+    margin-left:0px;
+    margin-right:0px;
+}
+
+#wrapper {
+    position: fixed;
+  // padding-left is overrided...
+    padding-left: 70px;
+    // Transitions the resizing between bar and content
+    transition: all .4s ease 0s;
+    // Does nothing?  I guess it extends the content div vertically to full size.
+    // height: 100%
+}
+
+// Sidebar general settings
+#sidebar-wrapper {
+  // Space to move the bar in and out of view. By default, it sits in the middle of the page... 
+  // Must be consistant with toggle classes.
+    margin-left: -160px;
+    // Controls the spacing of the navbar once the initial position/margins are established.
+    left: 70px;
+    // Controls width of bar. 150 for consistency
+    width: 160px;
+    // Background color of the navbar div that extends vertically.
+    background: rgba(0, 0, 0, 0.21);
+    // Fixes position of navbar
+    position: fixed;
+    // Extends navbar vertical div to 100% screen
+    height: 100%;
+    // Higher stack makes this sidebar be in front of other elements.
+    z-index: 10000;
+    transition: all .4s ease 0s;
+}
+
+// Style for elements inside the sidebar wrapper
+.sidebar-nav {
+    display: block;
+    float: left;
+    width: 150px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Content/body settings
+#page-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    // height: auto;
+}
+// Active class is for JS!
+// When sidebar is active, space between wrapper/body and edge of sidebar...
+#wrapper.active {
+    padding-left: 150px;
+}
+// When sidebar is active, space to the left is increased by...
+#wrapper.active #sidebar-wrapper {
+    left: 160px;
+}
+
+// Body/content space avaible.  100% for full div width.
+#page-content-wrapper {
+  width: 100%;
+}
+
+// Controls styling of each individual element!
+#sidebar_menu li a, .sidebar-nav li a {
+    color: white;
+    display: block;
+    float: left;
+    text-decoration: none;
+    width: 150px;
+    background: transparent;
+    // border-top: 1px solid #373737;
+    // border-bottom: 1px solid #1A1A1A;
+    // -webkit-transition: background .5s;
+    // -moz-transition: background .5s;
+    // -o-transition: background .5s;
+    // -ms-transition: background .5s;
+    // transition: background .5s;
+}
+
+.collapse-links li a {
+  border-bottom: 1px solid white;
+}
+
+// Settings for the hamburger icon
+.sidebar_name {
+    padding-top: 25px;
+    color: #fff;
+    opacity: .7;
+}
+
+// Sidebar text settings
+.sidebar-nav li {
+  // Height btw each link
+  line-height: 40px;
+  // Space from the left side of screen.
+  text-indent: 20px;
+}
+
+// Color for text below menu
+.sidebar-nav li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+// Hover options...
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+// More link interaction settings
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+// Menu div settings
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+#main_icon
+{
+  float: right;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+.sub_icon
+{
+  float: right;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+
+html { 
+  background: url('gastropod-bg.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  html { 
+    background: url('gastropod-bg-sm.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+  }
+  #sidebar-wrapper {
+    margin-left: -180px;
+  }
+  
+  #sidebar_menu li a, .sidebar-nav li a {
+    width: 164px;
+  }
+  .sidebar-nav li {
+    text-indent: 40px;
+  }
+  
+  #wrapper {
+    padding-left: 30px;
+  }
+
+}
+
+
+// @media (max-width:767px) {
+
+// #wrapper {
+//     padding-left: 70px;
+//     transition: all .4s ease 0s;
+// }
+// #sidebar-wrapper {
+//     left: 70px;
+// }
+// #wrapper.active {
+//     padding-left: 150px;
+// }
+// #wrapper.active #sidebar-wrapper {
+//     left: 150px;
+//     width: 150px;
+//     transition: all .4s ease 0s;
+// }
+// }
+
+
