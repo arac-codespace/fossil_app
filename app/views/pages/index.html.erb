@@ -1,36 +1,17 @@
   
   <h2> Kingdom: Animalia </h2>
+
+<% @phylum.each do |x| %>  
   
-  <%= link_to index_mollusca_path do %>
-    <h3>Mollusca</h3>
+  <% if x.kingdom_id == @animalia.id %>
+
+    <%= link_to(index_('#{x.phylum_name.downcase}')) do %>
+      <h3><%= x.phylum_name %></h3>
+    <% end %>
+    
   <% end %>
-  
-  
-  <%= link_to index_brachiopoda_path do %>
-    <h3>Brachiopoda</h3>
-  <% end %>
-  
-  
-  <%= link_to index_echinodermata_path do %>
-    <h3>Echinodermata</h3> 
-  <% end %>    
-  
-  
-  <%= link_to index_arthropod_path do %>
-    <h3>Arthropod</h3>
-  <% end %>
+<% end %>    
   
   
   <h2> Kingdom: Protozoa </h2>
   
-  <%= link_to index_foraminifera_path do %>
-    <h3>Foraminifera</h3> 
-  <% end %>
-  
-
-<h1> Loop... </h1>
-<% @fossils.each do |x| %>
-  
-  <%= x.kingdom.kingdom_name + ' ' + x.phylum.phylum_name + ' ' + x.fossil_class.class_name + ' ' + x.order.order_name + ' ' + x.family.family_name + ' ' + x.genera.genus_name + ' ' + x.species_name %> </br>
-
-<% end %>

@@ -3,8 +3,9 @@ class PagesController < ApplicationController
   end
   
   def index
-    @genus = Genera.all
-    @fossils = Fossil.all
+    @phylum = Phylum.all
+    @animalia = Kingdom.find_by kingdom_name: 'Animalia'
+    @protozoa = Kingdom.find_by kingdom_name: 'Protozoa'
   end
   
   def mollusca
