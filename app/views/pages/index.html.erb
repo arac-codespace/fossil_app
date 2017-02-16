@@ -27,3 +27,10 @@
     <h3>Foraminifera</h3> 
   <% end %>
   
+
+<h1> Loop... </h1>
+<% @fossils.each do |x| %>
+  
+  <%= x.kingdom.kingdom_name + ' ' + x.phylum.phylum_name + ' ' + x.fossil_class.class_name + ' ' + x.order.order_name + ' ' + x.family.family_name + ' ' + x.genera.genus_name + ' ' + x.species_name %> </br>
+
+<% end %>

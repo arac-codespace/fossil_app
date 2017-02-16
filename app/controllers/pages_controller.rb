@@ -3,6 +3,8 @@ class PagesController < ApplicationController
   end
   
   def index
+    @genus = Genera.all
+    @fossils = Fossil.all
   end
   
   def mollusca
