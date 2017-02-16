@@ -1,0 +1,42 @@
+<div class="index-header">
+  <div class= "container-fluid">
+    <div class = "row">
+      <div class = "col-md-12">
+        <h2> Main Navigation Hub</h2>
+
+          <h3> Kingdom: Animalia </h3>
+            
+          <% @phylums.each do |x| %>
+            <% if x.kingdom_id == @animalia.id %>
+              <%= link_to directory_path(x.id) do %>
+                <h4><%= x.phylum_name %></h4>
+              <% end %>  
+              
+              <% @classes.each do |z| %>
+                <% if z.phylum_id == x.id %>
+                  <h5> <%= z.class_name %> </h5>
+                <% end %>  
+              <% end %>
+            <% end %>
+          <% end %>
+
+          <h3> Kingdom: Animalia </h3>
+          
+          
+          <% @phylums.each do |x| %>
+            <% if x.kingdom_id == @protozoa.id %>
+              <%= link_to directory_path(x.id) do %>
+                <h4><%= x.phylum_name %></h4>
+              <% end %>  
+              <% @classes.each do |z| %>
+                <% if z.phylum_id == x.id %>
+                  <h5> <%= z.class_name %> </h5>
+                <% end %>  
+              <% end %>
+            <% end %>
+          <% end %>          
+
+      </div>
+    </div>
+  </div>
+</div>

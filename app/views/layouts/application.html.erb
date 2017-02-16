@@ -22,7 +22,7 @@
     <ul class="sidebar-nav " id="sidebar">
 
       <li>
-        <%= link_to '#' do %>
+        <%= link_to root_path do %>
           Home
           <span class="sub_icon glyphicon glyphicon-link"></span>
         <% end %> 
@@ -33,43 +33,22 @@
           About
           <span class="sub_icon glyphicon glyphicon-link"></span>
         <% end %> 
-      </li>      
+      </li> 
       
       <li>
-        <%= link_to '#index-child', role: :button,
-          data: { toggle: :collapse }, class: "collapse-parent" do %>
-          Index
+        <%= link_to species_index_path do %>
+          All Species
           <span class="sub_icon glyphicon glyphicon-link"></span>
         <% end %> 
-      </li>
+      </li>         
       
-        <div class = 'collapse' id ='index-child'>
-         <ul class="sidebar-nav collapse-links" id="sidebar">
-           
-            <li>
-              <%= link_to '#' do %>
-                Link 1
-                <span class="sub_icon glyphicon glyphicon-link"></span>
-              <% end %> 
-            </li>
-                       
-             
-            <li>
-              <%= link_to '#' do %>
-                Link 2
-                <span class="sub_icon glyphicon glyphicon-link"></span>
-              <% end %> 
-            </li>
-            
-            <li>
-              <%= link_to '#' do %>
-                Link 3
-                <span class="sub_icon glyphicon glyphicon-link"></span>
-              <% end %> 
-            </li>
-                
-          </ul>
-        </div> 
+      <li>
+        <%= link_to directory_index_path do %>
+          Directory
+          <span class="sub_icon glyphicon glyphicon-link"></span>
+        <% end %> 
+      </li>      
+ 
        
     </ul>
   </div>

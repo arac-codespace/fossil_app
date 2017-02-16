@@ -1,0 +1,16 @@
+<h1> All species of the <%= @name_find.phylum_name %> phylum available.</h1>
+
+<% @fossils.each do |x| %>
+  
+  <%= link_to directory_species_path(@p_id, x.id) do %>
+    <%= x.species_name %> </br>
+  <% end %>  
+
+
+
+<% end %>
+
+
+
+
+
