@@ -2,10 +2,9 @@ Rails.application.routes.draw do
 
 #   resources :post
   root to: "pages#home"
-  # get 'index', to: 'pages#index'  
+
   
-  # resources :index, only: [:index]
-  
+
   resources :directory, only: [:index, :show] do 
     resources :species, only: [:show]
   end
@@ -14,15 +13,9 @@ Rails.application.routes.draw do
   
   resources :fossils, except: [:index, :show]
   
-  # get '/mollusca', to: 'pages#mollusca'
-  # get '/brachiopoda', to: 'pages#brachiopoda'
-  # get '/echinodermata', to: 'pages#echinodermata'
-  # get '/arthropod', to: 'pages#arthropod'
-  # get '/foraminifera', to: 'pages#foraminifera'
   
+  # Redirects users who enter a wrong route path.  Will disable while in development...
+  # match '*path' => redirect('/'), via: :get
 
-  # resources :fossils
-  
-  
   
 end
