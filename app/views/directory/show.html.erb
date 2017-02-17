@@ -1,13 +1,22 @@
-<h1> All species of the <%= @name_find.phylum_name %> phylum available.</h1>
+<% if params[:class_var].blank? %>
+  <h1> All species of the <%= @phylum_find.phylum_name %> phylum available.</h1>
+<% else %>
+  <h1> All species of the <%= @phylum_find.phylum_name %> phylum, <%= @class.class_name %> class available.</h1>
+<% end %>
+
+
 
 <% @fossils.each do |x| %>
-  
-  <%= link_to directory_species_path(@p_id, x.id) do %>
-    <%= x.species_name %> </br>
-  <% end %>  
-
-
-
+    
+  <%if params[:class_var] && x.fossil_class_id == @class.id %>
+    <%= link_to directory_species_path(@phylum_id, x.id) do %>
+      <%= x.species_name %> </br>
+    <% end %>
+    <% elsif params[:class_var].blank? %>
+      <%= link_to directory_species_path(@phylum_id, x.id) do %>
+        <%= x.species_name %> </br>
+      <% end %>
+    <% end %>  
 <% end %>
 
 

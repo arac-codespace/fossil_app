@@ -2,41 +2,53 @@
   <div class= "container-fluid">
     <div class = "row">
       <div class = "col-md-12">
+        
         <h2> Main Navigation Hub</h2>
 
           <h3> Kingdom: Animalia </h3>
             
           <% @phylums.each do |x| %>
+          <!-- If the phylum records have the dynamic id of Animalia...-->
             <% if x.kingdom_id == @animalia.id %>
+              <!--Link to a show page where all the species share the same phylum_id -->
               <%= link_to directory_path(x.id) do %>
                 <h4><%= x.phylum_name %></h4>
               <% end %>  
               
               <% @classes.each do |z| %>
-                <% if z.phylum_id == x.id %>
-                  <h5> <%= z.class_name %> </h5>
+              <!-- Here, we do the same as above except we attach a dynamic query string-->
+              <!-- to filter the classes in the show view file... -->
+                <%= link_to directory_path(x.id, class_var: "#{z.class_name}") do %>
+                  <% if z.phylum_id == x.id %>
+                    <h5> <%= z.class_name %> </h5>
+                  <% end %>
                 <% end %>  
               <% end %>
             <% end %>
-          <% end %>
+          <% end %> <!-- end for each loop -->
 
-          <h3> Kingdom: Animalia </h3>
+          <h3> Kingdom: Protozoa </h3>
           
           
           <% @phylums.each do |x| %>
+          <!-- If the phylum records have the dynamic id of Protozoa...-->
             <% if x.kingdom_id == @protozoa.id %>
               <%= link_to directory_path(x.id) do %>
                 <h4><%= x.phylum_name %></h4>
               <% end %>  
               <% @classes.each do |z| %>
-                <% if z.phylum_id == x.id %>
-                  <h5> <%= z.class_name %> </h5>
-                <% end %>  
+              <!-- Here, we do the same as above except we attach a dynamic query string-->
+              <!-- to filter the classes in the show view file... -->              
+                <%= link_to directory_path(x.id, class_var: "#{z.class_name}") do %>
+                  <% if z.phylum_id == x.id %>
+                    <h5> <%= z.class_name %> </h5>
+                  <% end %>  
+                <% end %>
               <% end %>
             <% end %>
-          <% end %>          
+          <% end %>     <!-- end for each loop-->      
 
-      </div>
+      </div> <!-- col end -->
     </div>
   </div>
 </div>
