@@ -1,0 +1,71 @@
+// First pallete chocolaty
+$coffeemilkbrown: #BC8049;
+$cream: #F2C89D;
+$chocolate: #4A302B;
+$gray: #C8BEB6;
+$verydarkbrown: #251A18;
+
+// Pastely pallete
+$pastelyellow: #FFCC78;
+$pastelbrownishgray: #7E6B60;
+$pastelyblue: #71797F;
+$midsatbrown: #AC6236;
+$whiteish: #FAF9F8;
+
+// Sea pallete
+$darkbblue: #0A2342;
+$bluegreen: #119DA4;
+$junglegreen: #2CA58D;
+$spanishveridian: #09814A;
+$mountainmeadow: #32DE8A;
+
+
+$low-opacity-black: rgba(0, 0, 0, 0.40);
+
+.home-title {
+    font-family: serif;
+    color: white;
+    border: 12px solid rgb(255, 159, 28);
+    border-style: double;
+    background-color: rgba(4, 15, 76, 0.70);   // 90% pinkish
+    padding: 10px;
+    
+}
+
+.home-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: small;
+    padding: 12px;
+    border-radius: 15px;
+    // border: 2px solid rgba(0, 0, 0, 0.25);
+    background-color: rgba(4, 15, 76, 0.70);   // 90% pinkish
+}
+
+.home-buttons .btn-primary {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(4, 15, 76, 0.70);   // 90% pinkish
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    
+    a {
+        color: white;
+    }
+}
+
+.home-buttons .btn-primary:hover {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(46, 196, 182, 0.8);
+    border-radius: 15px;
+    
+    a {
+        color: white;
+    }
+}
+
+// background-color: rgba(46, 196, 182, 0.8); //blue bg
+// rgba(0, 0, 0, 0.21)  //transp black
+// rgba(46, 196, 182, 0.8); // cyan
+// #030d40 // dark blue

@@ -1,27 +1,29 @@
-// First pallete chocolaty
-$coffeemilkbrown: #BC8049;
-$cream: #F2C89D;
-$chocolate: #4A302B;
-$gray: #C8BEB6;
-$verydarkbrown: #251A18;
-
-// Pastely pallete
-$pastelyellow: #FFCC78;
-$pastelbrownishgray: #7E6B60;
-$pastelyblue: #71797F;
-$midsatbrown: #AC6236;
-$whiteish: #FAF9F8;
-
-// Sea pallete
-$darkbblue: #0A2342;
-$bluegreen: #119DA4;
-$junglegreen: #2CA58D;
-$spanishveridian: #09814A;
-$mountainmeadow: #32DE8A;
+.index-title {
+  font-family: serif;
+  color: white;
+  // border: 8px solid rgb(255, 159, 28); 
+  border-bottom: 8px solid #ff9f1c;
+  border-bottom-style: double;
+  background-color: rgba(4, 15, 76, 0.70);   // 90% pinkish
+}
 
 
-$low-opacity-black: rgba(0, 0, 0, 0.21);
+div.panel {
+  background-color: rgba(0, 0, 0, 0.36);
+  border: none;
+}
 
-.kingdom-section {
-    background-color: $low-opacity-black;
+.panel > div.panel-heading {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(4, 15, 76, 0.70); //blue with 80 opacity
+  // border-radius: 40px;
+  color: white;
+  border: none;
+}
+
+div.panel-body > a, div.panel-body > ul > a {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  
+  
 }

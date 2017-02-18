@@ -46,7 +46,7 @@
     // Controls width of bar. 150 for consistency
     width: 160px;
     // Background color of the navbar div that extends vertically.
-    background: rgba(0, 0, 0, 0.21);
+    background-color: rgba(4, 15, 76, 0.70); ;
     // Fixes position of navbar
     position: fixed;
     // Extends navbar vertical div to 100% screen
@@ -70,6 +70,7 @@
 #page-content-wrapper {
     padding-left: 0;
     margin-left: 0;
+    // Use this to adjust page content width.  NOTE:  Must adjust for media response
     width: 100%;
     margin-bottom: 50px;
     // height: auto;
@@ -167,7 +168,7 @@
 
 
 html { 
-  background: url('anem.jpg') no-repeat center center fixed; 
+  background: url('gastropod-bg.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -182,12 +183,13 @@ body {
 @media only screen and (max-width: 500px) {
   html { 
     // padding-bottom: 125px;
-    background: url('anem.jpg') no-repeat center center fixed; 
+    background: url('gastropod-bg-sm.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     min-height: 125%;
+    width: 100%;
   }
   
   #sidebar-wrapper {
@@ -205,13 +207,4 @@ body {
     padding-left: 30px;
   }
 
-}
-
-
-// Index results row table
-.results-row {
-  border: 1px solid white;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  background-color: rgba(0, 0, 0, 0.21);
 }

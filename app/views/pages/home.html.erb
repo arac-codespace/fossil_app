@@ -1,14 +1,30 @@
 <div class="index-header">
-  <div class= "container-fluid">
+  <div class= "container">
     <div class = "row">
       <div class = "col-md-12">
-
-        <h3>Marine Species Fossil Database </h3>
         
-        <p>Press the menu icon to navigate through the site! </p>
-        
-        <%= link_to "Fossil index", directory_index_path %>
-        <%= link_to "New Fossil", new_fossil_path %>
+        <div class = 'home-content'> 
+          <div class='row'>
+            <div class= 'col-md-offset-0 col-md-3'>
+              <h1 class= 'text-center home-title'>Marine Species Fossil Database </h1>
+            </div>
+          </div>
+          
+          <div class='row'>
+            <div class='col-md-offset-0 col-md-6'>  
+              <p class = 'home-subtitle'>Press the menu icon to navigate through the site! </p>
+            </div>
+          </div>
+          
+          <div class='row'>
+            <div class = 'col-md-offset-0 col-md-4'>
+              <div class= 'home-buttons'>
+                <button type="button" class="btn btn-primary"><%= link_to "Fossil index", directory_index_path %></button>
+                <button type="button" class="btn btn-primary"><%= link_to "New Fossil", new_fossil_path %></button>
+              </div>
+            </div>
+          </div>
+        </div> <!-- home-content end-->
         
       </div>
     </div>
