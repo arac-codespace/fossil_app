@@ -1,23 +1,39 @@
-<% if params[:class_var].blank? %>
-  <h1> All species of the <%= @phylum_find.phylum_name %> phylum available.</h1>
-<% else %>
-  <h1> All species of the <%= @phylum_find.phylum_name %> phylum, <%= @class.class_name %> class available.</h1>
-<% end %>
+<div class="index-header">
+  <div class= "container-fluid">
+    <div class = "row">
+      <div class = "col-md-12">
+        
+        <h2 class= 'show-title text-center'> Sub Directory </h2>
 
-
-
-<% @fossils.each do |x| %>
-    
-  <%if params[:class_var] && x.fossil_class_id == @class.id %>
-    <%= link_to directory_species_path(@phylum_id, x.id) do %>
-      <%= x.species_name %> </br>
-    <% end %>
-    <% elsif params[:class_var].blank? %>
-      <%= link_to directory_species_path(@phylum_id, x.id) do %>
-        <%= x.species_name %> </br>
-      <% end %>
-    <% end %>  
-<% end %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <% if params[:class_var].blank? %>
+            <h4 class= 'text-center'> All available species of the <%= @phylum_find.phylum_name %> phylum.</h4>
+          <% else %>
+            <h4 class = 'text-center'> All available species of the <%= @phylum_find.phylum_name %> phylum <i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= @class.class_name %> class.</h4>
+          <% end %>
+        </div> <!-- panel heading end -->
+        
+        <div class="panel-body">
+          <% @fossils.each do |x| %>
+              
+            <%if params[:class_var] && x.fossil_class_id == @class.id %>
+              <%= link_to directory_species_path(@phylum_id, x.id) do %>
+                <%= x.species_name %> </br>
+              <% end %>
+              <% elsif params[:class_var].blank? %>
+                <%= link_to directory_species_path(@phylum_id, x.id) do %>
+                  <%= x.species_name %> </br>
+                <% end %>
+              <% end %>  
+          <% end %>
+        </div> <!-- panel body end -->
+      </div>  <!-- panel end -->  
+        
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
