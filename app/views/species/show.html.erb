@@ -1,10 +1,46 @@
-<h1> Show page! </h1>
+<div class="index-header">
+  <div class= "container">
+    <div class = "row">
+      <div class = "col-md-12">
 
-<h3> Species Name </h3>
-<%= @fossil.species_name %> </br>
-<%= image_tag @fossil.avatar.url %>
+        <h2 class = 'text-center show-title'> Species Details </h2>
+        
+        <div class='row'>
+          <div class='col-md-offset-2 col-md-8'>
+            <div class="panel panel-default">
+              
+              <div class="panel-heading text-center"><h4> Species Name: <%= @fossil.species_name %> </h4></div>
+              <div class="panel-body text-center">
+                <h5> Age Range: <%= @fossil.age_range %> </h5>
+                <h5> Author: <%= @fossil.author %> </h5>                
+                <div class = 'avatar-container'>
+                  <%= image_tag @fossil.avatar.url(:medium), class: 'img-responsive center-block avatar-element' %>
+                </div>
+                <h5> Kingdom: <%= @fossil.kingdom.kingdom_name %> </h5>
+                <h5> Phylum: <%= @fossil.phylum.phylum_name %></h5>
+                <h5> Class: <%= @fossil.fossil_class.class_name %></h5>
+                <h5> Order: <%= @fossil.order.order_name %></h5>
+                <h5> Family: <%= @fossil.family.family_name %></h5>
+                <h5> Genus: <%= @fossil.genera.genus_name %></h5>
+                
+              </div> <!-- panel-body end -->
+            </div> <!-- panel end -->
+          </div> <!-- col end -->  
+        </div> <!-- row -->
+        
+        
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class='text-center'> Remarks & Environmental Interpretation </h4></div>
+          <div class="panel-body">
+            <p> <%= @fossil.remarks %></p></br>
+            <p> <%= @fossil.env_int %></p>
+          </div> <!-- panel-body end-->
+        </div> <!-- panel end -->
+        
+        
+        
 
-<h4> Kingdom </h4>
-<%= @fossil.kingdom.kingdom_name %>
-
-<%= @fossil.inspect%>
+      </div> <!-- col end -->
+    </div><!-- row end -->
+  </div><!-- container end -->
+</div><!-- page content div end -->

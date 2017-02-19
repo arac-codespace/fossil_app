@@ -33,7 +33,7 @@
     // Transitions the resizing between bar and content
     transition: all .4s ease 0s;
     // Does nothing?  I guess it extends the content div vertically to full size.
-    // height: 100%
+    height: 100%
 }
 
 // Sidebar general settings
@@ -73,7 +73,7 @@
     // Use this to adjust page content width.  NOTE:  Must adjust for media response
     width: 100%;
     margin-bottom: 50px;
-    // height: auto;
+    height: auto;
 }
 // Active class is for JS!
 // When sidebar is active, space between wrapper/body and edge of sidebar...
@@ -178,6 +178,7 @@ html {
 
 body {
   margin-bottom: 50px;
+  border: 1px solid transparent;
 }
 
 @media only screen and (max-width: 500px) {

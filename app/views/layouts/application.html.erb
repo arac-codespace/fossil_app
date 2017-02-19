@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Fossil_DB</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  %>
     <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua|Roboto" rel="stylesheet">  
@@ -30,18 +30,18 @@
       </li>
       
       <li>
-        <%= link_to species_index_path do %>
-          All Species
-          <!--<span class="sub_icon glyphicon glyphicon-link"></span>-->
-        <% end %> 
-      </li>         
-      
-      <li>
         <%= link_to directory_index_path do %>
           Directory
           <!--<span class="sub_icon glyphicon glyphicon-link"></span>-->
         <% end %> 
-      </li>   
+      </li> 
+      
+      <li>
+        <%= link_to species_index_path do %>
+          All Species
+          <!--<span class="sub_icon glyphicon glyphicon-link"></span>-->
+        <% end %> 
+      </li>       
       
       <li>
         <%= link_to '#' do %>
@@ -58,17 +58,9 @@
   <div id="page-content-wrapper">
     <!-- Keep all page content within the page-content inset div! -->
     <div class="page-content inset">
-      <div class="row">
-        <div class="container">
-          <div class="col-md-12">
-            <div class="row"> 
           
-              <%= yield %>
-
-            </div>
-          </div>
-        </div>
-      </div>
+      <%= yield %>
+              
     </div>  
   </div>
   
