@@ -45,6 +45,9 @@ gem "paperclip", "~> 5.0.0"
 # Use ransack gem for search fields and sorting
 gem 'ransack'
 
+# Use breadcrumb_on_rails gem for breadcrumbs...
+gem "breadcrumbs_on_rails"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
