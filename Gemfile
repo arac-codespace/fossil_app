@@ -42,6 +42,9 @@ gem 'hirb', '0.7.3'
 # Use paperclip gem for image uploading
 gem "paperclip", "~> 5.0.0"
 
+# Use ransack gem for search fields and sorting
+gem 'ransack'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

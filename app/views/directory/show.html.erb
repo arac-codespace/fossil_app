@@ -3,14 +3,23 @@
     <div class = "row">
       <div class = "col-md-12">
         
-        <h2 class= 'show-title text-center'> Sub Directory </h2>
+        <h2 class= 'show-title text-center'> <strong> Sub Directory <strong></h2>
+        
+        <%= search_form_for @q, url: directory_path do |f| %>
+        	<div class='field'>
+        		<%= f.label :species_name_or_fossil_class_class_name_or_family_family_name_or_genera_genus_name_cont, "Search by:" %>
+        		<%= f.text_field :species_name_or_fossil_class_class_name_or_family_family_name_or_genera_genus_name_cont %>
+        	</div>
+        	<div class ='action'> <%= f.submit 'Search' %> </div>
+        <% end %>
+        
 
       <div class="panel panel-default">
         <div class="panel-heading">
           <% if params[:class_var].blank? %>
-            <h4 class= 'text-center'> All available species of the <%= @phylum_find.phylum_name %> phylum.</h4>
+            <h4 class= 'text-center'> ALL available species of the <%= @phylum_find.phylum_name %> phylum. </h4>
           <% else %>
-            <h4 class = 'text-center'> All available species of the <%= @phylum_find.phylum_name %> phylum <i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= @class.class_name %> class.</h4>
+            <h4 class = 'text-center'> ALL available species of the <%= @phylum_find.phylum_name %> phylum <i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= @class.class_name %> class. </h4>
           <% end %>
         </div> <!-- panel heading end -->
         
@@ -19,12 +28,19 @@
               
             <%if params[:class_var] && x.fossil_class_id == @class.id %>
               <%= link_to directory_species_path(@phylum_id, x.id) do %>
-                <%= x.species_name %> </br>
+                <h4><%= x.species_name %></h4>
               <% end %>
+              <div class = 'description'>
+                <h5>Kingdom: <small><%= x.kingdom.kingdom_name %></small> | Phylum: <small><%= x.phylum.phylum_name%></small> | Class: <small><%= x.fossil_class.class_name %></small> | Order: <small><%= x.order.order_name %></small> | Family: <small><%= x.family.family_name %></small> | Genus: <small><%= x.genera.genus_name %></small></h5> </br>
+              </div>
+              
               <% elsif params[:class_var].blank? %>
                 <%= link_to directory_species_path(@phylum_id, x.id) do %>
-                  <%= x.species_name %> </br>
+                  <h4><%= x.species_name %></h4>
                 <% end %>
+                <div class = 'description'>
+                  <h5>Kingdom: <small><%= x.kingdom.kingdom_name %></small> | Phylum: <small><%= x.phylum.phylum_name%></small> | Class: <small><%= x.fossil_class.class_name %></small> | Order: <small><%= x.order.order_name %></small> | Family: <small><%= x.family.family_name %></small> | Genus: <small><%= x.genera.genus_name %></small></h5> </br>
+                </div>
               <% end %>  
           <% end %>
         </div> <!-- panel body end -->

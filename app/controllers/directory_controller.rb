@@ -11,12 +11,16 @@ class DirectoryController < ApplicationController
   end
   
   def show
+    
+    @q = Fossil.ransack(params[:q])
+    @fossil_s = @q.result.includes(:kingdom)
+    
     # Phylum param assigned from the index file to url route.  Phylum.id
     @phylum_id = params[:id]
     # Finds the phylum record that matches the id param forwarded from the index. 
     @phylum_find = Phylum.find_by id: @phylum_id
     # These are all the fossils that share the phylum_id with the index parameter.
-    @fossils = Fossil.where phylum_id: @phylum_id
+    @fossils = @fossil_s.where phylum_id: @phylum_id
     # Redirects if the expected Phylum.id param is not found in the db...
     redirect_to directory_index_path if @phylum_find.nil?
     
