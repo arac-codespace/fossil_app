@@ -5,19 +5,66 @@
         
         <h2 class= 'show-title text-center'> <strong> Sub Directory <strong></h2>
         
+        <!-- Sorting Links -->
+        <div class="dropdown col-sm-8 col-md-8">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sort by:
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li>            
+              <%= sort_link(@q, :species_name) do %>
+                Species Name
+              <% end %>   
+            </li>
+            <li>
+              <%= sort_link(@q, :phylum_phylum_name) do %>
+                Phylum
+              <% end %>      
+            </li>      
+            <li>
+              <%= sort_link(@q, :fossil_class_class_name) do %>
+                Class
+              <% end %>      
+            </li>      
+            <li>
+              <%= sort_link(@q, :order_order_name) do %>
+                Order
+              <% end %>      
+            </li> 
+            <li>
+              <%= sort_link(@q, :family_family_name) do %>
+                Family
+              <% end %>      
+            </li> 
+            <li>
+              <%= sort_link(@q, :genera_genus_name) do %>
+                Genus
+              <% end %>      
+            </li>            
+          </ul>
+        </div>         
+        
         <%= search_form_for @q, url: directory_path do |f| %>
-        	<div class='field'>
-        		<%= f.label :species_name_or_fossil_class_class_name_or_family_family_name_or_genera_genus_name_cont, "Search by:" %>
-        		<%= f.text_field :species_name_or_fossil_class_class_name_or_family_family_name_or_genera_genus_name_cont %>
-        	</div>
-        	<div class ='action'> <%= f.submit 'Search' %> </div>
+        
+          <div class="row">
+            <div class="col-sm-4 col-md-4">
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <%= f.submit 'Go!', class: 'btn btn-default' %>
+                </span>
+                  <%= f.text_field :species_name_or_fossil_class_class_name_or_family_family_name_or_genera_genus_name_cont ,placeholder: "Search field", class: 'form-control' %>
+              </div><!-- /input-group -->
+            </div>
+          </div>
+            
         <% end %>
         
 
       <div class="panel panel-default">
         <div class="panel-heading">
           <% if params[:class_var].blank? %>
-            <h4 class= 'text-center'> ALL available species of the <%= @phylum_find.phylum_name %> phylum. </h4>
+            <h4 class= 'text-center'> ALL available species of the <%= @phylum_find.phylum_name %> phylum </h4>
           <% else %>
             <h4 class = 'text-center'> ALL available species of the <%= @phylum_find.phylum_name %> phylum <i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= @class.class_name %> class. </h4>
           <% end %>

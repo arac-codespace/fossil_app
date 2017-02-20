@@ -9,7 +9,10 @@ class SpeciesController < ApplicationController
   
   
   def index
-    @fossils = Fossil.all
+    
+    @q = Fossil.ransack(params[:q])
+    @fossils = @q.result.includes(:kingdom)    
+    # @fossils = Fossil.all
   end
 
 end

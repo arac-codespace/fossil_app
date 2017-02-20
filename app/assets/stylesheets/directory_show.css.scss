@@ -14,3 +14,47 @@
 .description > h5 {
   color: rgb(255, 159, 28);
 }
+
+
+
+
+span > .btn-default {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(4, 15, 76, 0.70);   // 90% pinkish
+    border: none;
+    color: white;
+    
+}
+
+span > .btn-default:hover {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(46, 196, 182, 0.8);
+    border: none;
+     color: white;
+    
+}
+
+.input-group .form-control {
+    color: black;
+    background-image: none;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    border: none;    
+}
+
+.dropdown > .btn-default {
+  color: white;
+  background-color: rgba(4, 15, 76, 0.70);
+  border: none;
+}
+
+.dropdown > .btn-default:hover {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(46, 196, 182, 0.8);
+    border: none;
+     color: white;
+    
+}
