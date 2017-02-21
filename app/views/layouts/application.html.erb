@@ -58,6 +58,16 @@
   <div id="page-content-wrapper">
     <!-- Keep all page content within the page-content inset div! -->
     <div class="page-content inset">
+
+      <div class= "container">
+        <div class = "row">
+          <div class='col-md-6'>
+            <ol class="breadcrumb">
+              <%= render_breadcrumbs :tag => :li, :separator => "" %>
+            </ol>
+          </div>
+        </div>
+      </div>  
           
       <%= yield %>
               

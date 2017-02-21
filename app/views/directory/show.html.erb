@@ -6,67 +6,68 @@
         <h2 class= 'show-title text-center'> <strong> Sub Directory <strong></h2>
         
         <!-- Sorting Links -->
-        <div class="dropdown col-sm-8 col-md-8">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sort by:
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <li>            
-              <%= sort_link(@q, :species_name) do %>
-                Species Name
-              <% end %>   
-            </li>
-            <li>
-              <%= sort_link(@q, :phylum_phylum_name) do %>
-                Phylum
-              <% end %>      
-            </li>      
-            <li>
-              <%= sort_link(@q, :fossil_class_class_name) do %>
-                Class
-              <% end %>      
-            </li>      
-            <li>
-              <%= sort_link(@q, :order_order_name) do %>
-                Order
-              <% end %>      
-            </li> 
-            <li>
-              <%= sort_link(@q, :family_family_name) do %>
-                Family
-              <% end %>      
-            </li> 
-            <li>
-              <%= sort_link(@q, :genera_genus_name) do %>
-                Genus
-              <% end %>      
-            </li>            
-          </ul>
-        </div>         
-        
-        <%= search_form_for @q, url: directory_path do |f| %>
-        
-          <div class="row">
-            <div class="col-sm-4 col-md-4">
+        <div class ='row'>
+          <div class='col-md-2'>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sort by:
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li>            
+                  <%= sort_link(@q, :species_name) do %>
+                    Species Name
+                  <% end %>   
+                </li>
+                <li>
+                  <%= sort_link(@q, :phylum_phylum_name) do %>
+                    Phylum
+                  <% end %>      
+                </li>      
+                <li>
+                  <%= sort_link(@q, :fossil_class_class_name) do %>
+                    Class
+                  <% end %>      
+                </li>      
+                <li>
+                  <%= sort_link(@q, :order_order_name) do %>
+                    Order
+                  <% end %>      
+                </li> 
+                <li>
+                  <%= sort_link(@q, :family_family_name) do %>
+                    Family
+                  <% end %>      
+                </li> 
+                <li>
+                  <%= sort_link(@q, :genera_genus_name) do %>
+                    Genus
+                  <% end %>      
+                </li>            
+              </ul>
+            </div> <!-- dropdown-->
+          </div> <!-- col -->
+          
+          <div class="col-sm-4 col-md-offset-6 col-md-4">
+            <%= search_form_for @q, url: directory_path do |f| %>
               <div class="input-group">
                 <span class="input-group-btn">
                   <%= f.submit 'Go!', class: 'btn btn-default' %>
                 </span>
                   <%= f.text_field :species_name_or_fossil_class_class_name_or_family_family_name_or_genera_genus_name_cont ,placeholder: "Search field", class: 'form-control' %>
               </div><!-- /input-group -->
-            </div>
-          </div>
-            
-        <% end %>
+            <% end %>
+          </div> <!-- col -->
+                
+        </div> <!-- row -->        
         
 
       <div class="panel panel-default">
         <div class="panel-heading">
           <% if params[:class_var].blank? %>
-            <h4 class= 'text-center'> ALL available species of the <%= @phylum_find.phylum_name %> phylum </h4>
+            <h4 class= 'text-center'> All available species of the <%= @phylum_find.phylum_name %> phylum </h4>
           <% else %>
-            <h4 class = 'text-center'> ALL available species of the <%= @phylum_find.phylum_name %> phylum <i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= @class.class_name %> class. </h4>
+            <h4 class = 'text-center'> All available species of the <%= @phylum_find.phylum_name %> phylum <i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= @class.class_name %> class. </h4>
           <% end %>
         </div> <!-- panel heading end -->
         
@@ -78,7 +79,7 @@
                 <h4><%= x.species_name %></h4>
               <% end %>
               <div class = 'description'>
-                <h5>Kingdom: <small><%= x.kingdom.kingdom_name %></small> | Phylum: <small><%= x.phylum.phylum_name%></small> | Class: <small><%= x.fossil_class.class_name %></small> | Order: <small><%= x.order.order_name %></small> | Family: <small><%= x.family.family_name %></small> | Genus: <small><%= x.genera.genus_name %></small></h5> </br>
+                <h5>| Kingdom: <small><%= x.kingdom.kingdom_name %></small></h5> <h5>| Phylum: <small><%= x.phylum.phylum_name%></small></h5> <h5>| Class: <small><%= x.fossil_class.class_name %></small></h5> <h5>| Order: <small><%= x.order.order_name %></small></h5> <h5>| Family: <small><%= x.family.family_name %></small></h5><h5> | Genus: <small><%= x.genera.genus_name %></small></h5> </br>
               </div>
               
               <% elsif params[:class_var].blank? %>

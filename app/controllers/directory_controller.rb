@@ -1,7 +1,12 @@
 class DirectoryController < ApplicationController
 
+  add_breadcrumb "Home", :root_path 
+  add_breadcrumb "Main Directory", :directory_index_path
+
+
 
   def index
+    
     @phylums = Phylum.all
     @classes = FossilClass.all
     # In case the id of the Kingdom changes on a future db update, I loop for the
@@ -12,8 +17,11 @@ class DirectoryController < ApplicationController
   
   def show
     
+    add_breadcrumb "Sub Directory" 
+
+    
     @q = Fossil.ransack(params[:q])
-    @fossil_s = @q.result.includes(:kingdom)
+    @fossil_s = @q.result.includes(:kingdom, :fossil_class, :order)
     
     # Phylum param assigned from the index file to url route.  Phylum.id
     @phylum_id = params[:id]

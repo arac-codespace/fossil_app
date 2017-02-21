@@ -69,3 +69,16 @@ $low-opacity-black: rgba(0, 0, 0, 0.40);
 // rgba(0, 0, 0, 0.21)  //transp black
 // rgba(46, 196, 182, 0.8); // cyan
 // #030d40 // dark blue
+
+ol.breadcrumb {
+  color: #ff9f1c;
+  background-color: rgba(4, 15, 76, 0.70);
+  margin-top: 10px;
+  margin-bottom: 2px;
+  border: none;
+  border-radius: 0px;  
+  
+  a {
+    color: white;
+  }
+}

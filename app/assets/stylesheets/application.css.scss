@@ -72,7 +72,7 @@
     margin-left: 0;
     // Use this to adjust page content width.  NOTE:  Must adjust for media response
     width: 100%;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     height: auto;
 }
 // Active class is for JS!
@@ -168,7 +168,7 @@
 
 
 html { 
-  background: url('gastropod-bg.jpg') no-repeat center center fixed; 
+  background: url('fossil-bg-lg.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -176,21 +176,22 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 50px;
-  border: 1px solid transparent;
+div.page-content {
+  padding-left: 25px;
 }
+
+
+
 
 @media only screen and (max-width: 500px) {
   html { 
     // padding-bottom: 125px;
-    background: url('gastropod-bg-sm.jpg') no-repeat center center fixed; 
+    background: url('fossil-bg-md.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     min-height: 125%;
-    width: 100%;
   }
   
   #sidebar-wrapper {
@@ -206,6 +207,14 @@ body {
   
   #wrapper {
     padding-left: 30px;
+  }
+  
+  #page-content-wrapper {
+    width: 105%;
+  }
+  
+  div.dropdown {
+    margin-bottom: 5px;
   }
 
 }
