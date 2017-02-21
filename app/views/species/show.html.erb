@@ -9,19 +9,19 @@
           <div class='col-md-offset-2 col-md-8'>
             <div class="panel panel-default">
               
-              <div class="panel-heading text-center"><h4> Species Name: <%= @fossil.species_name %> </h4></div>
+              <div class="panel-heading text-center"><h4> Species Name: <small><%= @fossil.species_name %></small> </h4></div>
               <div class="panel-body text-center">
-                <h5> Age Range: <%= @fossil.age_range %> </h5>
-                <h5> Author: <%= @fossil.author %> </h5>                
+                <h5> Age Range: <small><%= @fossil.age_range %> </small> </h5>
+                <h5> Author: <small><%= @fossil.author %> </small> </h5>                
                 <div class = 'avatar-container'>
                   <%= image_tag @fossil.avatar.url(:medium), class: 'img-responsive center-block avatar-element' %>
                 </div>
-                <h5> Kingdom: <%= @fossil.kingdom.kingdom_name %> </h5>
-                <h5> Phylum: <%= @fossil.phylum.phylum_name %></h5>
-                <h5> Class: <%= @fossil.fossil_class.class_name %></h5>
-                <h5> Order: <%= @fossil.order.order_name %></h5>
-                <h5> Family: <%= @fossil.family.family_name %></h5>
-                <h5> Genus: <%= @fossil.genera.genus_name %></h5>
+                <h5> Kingdom: <small><%= @fossil.kingdom.kingdom_name %> </small> </h5>
+                <h5> Phylum: <small><%= @fossil.phylum.phylum_name %></small> </h5>
+                <h5> Class: <small><%= @fossil.fossil_class.class_name %></small> </h5>
+                <h5> Order: <small><%= @fossil.order.order_name %></small> </h5>
+                <h5> Family: <small><%= @fossil.family.family_name %></small> </h5>
+                <h5> Genus: <small><%= @fossil.genera.genus_name %></small> </h5>
                 
               </div> <!-- panel-body end -->
             </div> <!-- panel end -->

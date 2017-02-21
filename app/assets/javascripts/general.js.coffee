@@ -12,5 +12,6 @@ $(document).on "turbolinks:load", ->
     e.preventDefault()
     $('#wrapper').toggleClass 'active'
     $('#sidebar').fadeToggle('fast')
+      
     return
   return

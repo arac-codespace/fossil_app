@@ -194,6 +194,7 @@ div.page-content {
     min-height: 125%;
   }
   
+  
   #sidebar-wrapper {
     margin-left: -180px;
   }
@@ -215,6 +216,14 @@ div.page-content {
   
   div.dropdown {
     margin-bottom: 5px;
+  }
+  
+  div.page-content {
+    padding-left: 10px;
+  }
+  
+  #wrapper.active {
+    padding-left: 125px;
   }
 
 }

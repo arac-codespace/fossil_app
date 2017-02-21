@@ -79,7 +79,7 @@
                 <h4><%= x.species_name %></h4>
               <% end %>
               <div class = 'description'>
-                <h5>| Kingdom: <small><%= x.kingdom.kingdom_name %></small></h5> <h5>| Phylum: <small><%= x.phylum.phylum_name%></small></h5> <h5>| Class: <small><%= x.fossil_class.class_name %></small></h5> <h5>| Order: <small><%= x.order.order_name %></small></h5> <h5>| Family: <small><%= x.family.family_name %></small></h5><h5> | Genus: <small><%= x.genera.genus_name %></small></h5> </br>
+                <ul><h5>| Kingdom: <small><%= x.kingdom.kingdom_name %></small></h5> <h5>| Phylum: <small><%= x.phylum.phylum_name%></small></h5> <h5>| Class: <small><%= x.fossil_class.class_name %></small></h5> <h5>| Order: <small><%= x.order.order_name %></small></h5> <h5>| Family: <small><%= x.family.family_name %></small></h5><h5> | Genus: <small><%= x.genera.genus_name %></small></h5></ul> </br>
               </div>
               
               <% elsif params[:class_var].blank? %>
@@ -87,7 +87,7 @@
                   <h4><%= x.species_name %></h4>
                 <% end %>
                 <div class = 'description'>
-                  <h5>Kingdom: <small><%= x.kingdom.kingdom_name %></small> | Phylum: <small><%= x.phylum.phylum_name%></small> | Class: <small><%= x.fossil_class.class_name %></small> | Order: <small><%= x.order.order_name %></small> | Family: <small><%= x.family.family_name %></small> | Genus: <small><%= x.genera.genus_name %></small></h5> </br>
+                <ul><h5>| Kingdom: <small><%= x.kingdom.kingdom_name %></small></h5> <h5>| Phylum: <small><%= x.phylum.phylum_name%></small></h5> <h5>| Class: <small><%= x.fossil_class.class_name %></small></h5> <h5>| Order: <small><%= x.order.order_name %></small></h5> <h5>| Family: <small><%= x.family.family_name %></small></h5><h5> | Genus: <small><%= x.genera.genus_name %></small></h5></ul> </br>
                 </div>
               <% end %>  
           <% end %>

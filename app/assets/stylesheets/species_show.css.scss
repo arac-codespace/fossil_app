@@ -11,8 +11,23 @@
 div.panel-body {
   color: white;
   font-family: 'Roboto', sans-serif;
+  h5 > small {
+    color: rgb(255, 159, 28);
+  }
 }
 
 .avatar-element {
     border: 4px solid white;
+}
+
+div.panel-body > ul > h5 {
+  color: white;
+}
+
+div.panel-body > ul > h5 > small {
+  color: rgb(255, 159, 28);
+}
+
+div.panel-heading > h4 > small {
+  color: rgb(255, 159, 28);
 }
