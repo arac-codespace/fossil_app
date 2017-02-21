@@ -24,10 +24,30 @@ div.panel-body > ul > h5 {
   color: white;
 }
 
+div.panel-body >a > h4:hover {
+  color: #ff9f1c;
+}
+
 div.panel-body > ul > h5 > small {
   color: rgb(255, 159, 28);
 }
 
 div.panel-heading > h4 > small {
   color: rgb(255, 159, 28);
+}
+
+a#menu-toggle > span:hover {
+  color: #ff9f1c;
+}
+
+.panel-body > a > h5:hover {
+  color: #ff9f1c;
+}
+
+.panel-body > ul > a > li > h5:hover {
+  color: #ff9f1c;
+}
+
+.breadcrumb > li > a:hover {
+  color: #ff9f1c;
 }

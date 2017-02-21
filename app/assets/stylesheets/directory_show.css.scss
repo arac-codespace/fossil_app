@@ -44,11 +44,26 @@ span > .btn-default:hover {
   border: none;
 }
 
-.dropdown > .btn-default:hover {
+.dropdown > button.btn-default.dropdown-toggle:active {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     background-color: rgba(46, 196, 182, 0.8);
     border: none;
-     color: white;
-    
+    color: white;
+}
+
+.dropdown > button.btn-default.dropdown-toggle:hover {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(46, 196, 182, 0.8);
+    border: none;
+    color: white;
+}
+
+.dropdown > button.btn-default.dropdown-toggle:focus {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(46, 196, 182, 0.8);
+    border: none;
+    color: white;
 }
