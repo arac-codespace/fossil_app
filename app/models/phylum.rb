@@ -5,4 +5,9 @@ class Phylum < ActiveRecord::Base
   has_many :orders
   has_many :families
   has_many :generas
+  
+    # In order for active admin to recognize the display name/label...
+  def display_name
+    phylum_name
+  end  
 end

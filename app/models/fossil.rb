@@ -10,6 +10,9 @@ class Fossil < ActiveRecord::Base
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "fossil-default.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/  
   
-  
+    # In order for active admin to recognize the display name/label...
+  def display_name
+    species_name
+  end  
   
 end

@@ -48,6 +48,16 @@ gem 'ransack'
 # Use breadcrumb_on_rails gem for breadcrumbs...
 gem "breadcrumbs_on_rails"
 
+# Use active-admin for admin features...
+gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
+
+# Use inherited_resources for active-admin rails 5 support
+gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
+
+# Use devise to register users.  Apparently, it needs to be specified for AA to work as of the specified release.
+gem 'devise'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -5,5 +5,10 @@ class Family < ActiveRecord::Base
   belongs_to :order
   has_many :generas
   has_many :fossils
+  
+  # In order for active admin to recognize the display name/label...
+  def display_name
+    family_name
+  end    
 
 end
