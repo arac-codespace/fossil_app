@@ -2,9 +2,6 @@ ActiveAdmin.register Fossil do
 
 permit_params :kingdom_id, :phylum_id, :fossil_class_id, :order_id, :family_id, :genera_id, :summary, :remarks, :species_name, :env_int, :author, :age_range, :avatar
 
-
-
-
   form do |f|
     f.inputs "Project Details" do
       
@@ -33,6 +30,26 @@ permit_params :kingdom_id, :phylum_id, :fossil_class_id, :order_id, :family_id, 
     end
     f.actions
   end
+
+
+
+  index do
+    column :id
+    column :species_name
+    column :kingdom_id
+    column :phylum_id
+    column :fossil_class_id
+    column :order_id
+    column :family_id
+    column :genera_id
+    column :age_range
+    column :author  
+    column :created_at
+    column :avatar_file_name
+    actions
+  end
+  
+  config.batch_actions = false
 
 
 end
