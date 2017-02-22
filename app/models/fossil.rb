@@ -15,4 +15,10 @@ class Fossil < ActiveRecord::Base
     species_name
   end  
   
+  
+  
+  validates :species_name, presence: true
+  validates :kingdom_id, :phylum_id, :fossil_class_id, :order_id, :family_id, :genera_id, presence: { message: "must be given please" }
+  
+  
 end
