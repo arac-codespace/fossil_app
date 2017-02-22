@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 #   resources :post
   root to: "pages#home"
+  get '/about', to: 'pages#about'
+  get '/general_information', to: 'pages#general_information'
 
   
 
