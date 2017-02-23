@@ -35,7 +35,7 @@ h5 {
 #wrapper {
     position: absolute;
   // padding-left is overrided...
-    padding-left: 70px;
+    padding-left: 150px;
     // Transitions the resizing between bar and content
     transition: all .4s ease 0s;
     // Does nothing?  I guess it extends the content div vertically to full size.
@@ -48,7 +48,7 @@ h5 {
   // Must be consistant with toggle classes.
     margin-left: -160px;
     // Controls the spacing of the navbar once the initial position/margins are established.
-    left: 70px;
+    left: 160px;
     // Controls width of bar. 150 for consistency
     width: 160px;
     // Background color of the navbar div that extends vertically.
@@ -84,11 +84,11 @@ h5 {
 // Active class is for JS!
 // When sidebar is active, space between wrapper/body and edge of sidebar...
 #wrapper.active {
-    padding-left: 150px;
+    padding-left: 70px;
 }
 // When sidebar is active, space to the left is increased by...
 #wrapper.active #sidebar-wrapper {
-    left: 160px;
+    left: 70px;
 }
 
 // Body/content space avaible.  100% for full div width.
@@ -173,6 +173,7 @@ h5 {
 }
 
 
+// Background image
 html { 
   background: url('fossil-bg-lg.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;

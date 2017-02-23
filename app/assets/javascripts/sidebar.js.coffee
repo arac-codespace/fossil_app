@@ -1,11 +1,11 @@
 
 $(document).on "turbolinks:load", ->
     
-  setTimeout (->
-    $('body').fadeIn()
-    return), 1000
-  
-  $('#wrapper').removeClass 'active'
+  # setTimeout (->
+  #   $('body').fadeIn()
+  #   return), 1000
+
+  # $('#wrapper').removeClass 'active'
   $('#sidebar').hide()
   
   $('#menu-toggle').click (e) ->
