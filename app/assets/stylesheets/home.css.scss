@@ -1,26 +1,4 @@
-// First pallete chocolaty
-$coffeemilkbrown: #BC8049;
-$cream: #F2C89D;
-$chocolate: #4A302B;
-$gray: #C8BEB6;
-$verydarkbrown: #251A18;
-
-// Pastely pallete
-$pastelyellow: #FFCC78;
-$pastelbrownishgray: #7E6B60;
-$pastelyblue: #71797F;
-$midsatbrown: #AC6236;
-$whiteish: #FAF9F8;
-
-// Sea pallete
-$darkbblue: #0A2342;
-$bluegreen: #119DA4;
-$junglegreen: #2CA58D;
-$spanishveridian: #09814A;
-$mountainmeadow: #32DE8A;
-
-
-$low-opacity-black: rgba(0, 0, 0, 0.40);
+// HOME PAGE STYLING
 
 .home-title {
     font-family: serif;
@@ -65,20 +43,3 @@ $low-opacity-black: rgba(0, 0, 0, 0.40);
     }
 }
 
-// background-color: rgba(46, 196, 182, 0.8); //blue bg
-// rgba(0, 0, 0, 0.21)  //transp black
-// rgba(46, 196, 182, 0.8); // cyan
-// #030d40 // dark blue
-
-ol.breadcrumb {
-  color: #ff9f1c;
-  background-color: rgba(4, 15, 76, 0.70);
-  margin-top: 10px;
-  margin-bottom: 2px;
-  border: none;
-  border-radius: 0px;  
-  
-  a {
-    color: white;
-  }
-}

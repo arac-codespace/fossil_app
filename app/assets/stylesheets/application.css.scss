@@ -21,9 +21,51 @@
 
 
 
+// GENERAL STYLING
 
 h5 {
   font-size: 16px;
+}
+
+// Background image
+html { 
+  background: url('fossil-bg-lg.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+}
+
+// Page content space from left side of sidebar
+div.page-content {
+  padding-left: 25px;
+}
+
+// BREADCRUMB STYLE
+ol.breadcrumb {
+  color: #ff9f1c;
+  background-color: rgba(4, 15, 76, 0.70);
+  margin-top: 10px;
+  margin-bottom: 2px;
+  border: none;
+  border-radius: 0px;  
+  
+  a {
+    color: white;
+  }
+}
+
+// Hover color for breadcrumbs
+.breadcrumb > li > a:hover {
+  color: #ff9f1c;
+}
+
+// SIDEBAR CODE 
+
+// Sidebar menu icon hover
+a#menu-toggle > span:hover {
+  color: #ff9f1c;
 }
 
 // Margin when sidebar is active and inactive.
@@ -173,24 +215,10 @@ h5 {
 }
 
 
-// Background image
-html { 
-  background: url('fossil-bg-lg.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 100%;
-}
-
-div.page-content {
-  padding-left: 25px;
-}
-
-
-
+// GENERAL MEDIA QUERIES
 
 @media only screen and (max-width: 500px) {
+  // Background image
   html { 
     // padding-bottom: 125px;
     background: url('fossil-bg-md.jpg') no-repeat center center fixed; 
@@ -201,6 +229,7 @@ div.page-content {
     min-height: 125%;
   }
   
+  // Sidebar code
   
   #sidebar-wrapper {
     margin-left: -180px;

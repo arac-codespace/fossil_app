@@ -1,32 +1,132 @@
+// BUTTON STYLING
+
+// Search bar button styling
+span > .btn-default {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(4, 15, 76, 0.70);   // 90% pinkish
+    border: none;
+    color: white;
+    
+}
+
+span > .btn-default:hover {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(46, 196, 182, 0.8);
+    border: none;
+     color: white;
+    
+}
+
+// Sort button styling
+
+.dropdown > .btn-default {
+  color: white;
+  background-color: rgba(4, 15, 76, 0.70);
+  border: none;
+}
+
+.dropdown > button.btn-default.dropdown-toggle:active {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(46, 196, 182, 0.8);
+    border: none;
+    color: white;
+}
+
+.dropdown > button.btn-default.dropdown-toggle:hover {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(46, 196, 182, 0.8);
+    border: none;
+    color: white;
+}
+
+.dropdown > button.btn-default.dropdown-toggle:focus {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(46, 196, 182, 0.8);
+    border: none;
+    color: white;
+}
+
+// DIRECTORY INDEX CSS
 .index-title {
   font-family: serif;
   color: white;
-  // border: 8px solid rgb(255, 159, 28); 
   border-bottom: 8px solid #ff9f1c;
   border-bottom-style: double;
   background-color: rgba(4, 15, 76, 0.70);   // 90% pinkish
   padding: 10px;
 }
 
+// Applies hover color to phylums
+.panel-body > a > h5:hover {
+  color: #ff9f1c;
+}
 
+// Applies hover color to phylum subitems
+.panel-body > ul > a > li > h5:hover {
+  color: #ff9f1c;
+}
+
+// INDEX CSS STYLING - general?
+
+// Full panel styling
 div.panel {
   background-color: rgba(0, 0, 0, 0.36);
   border: none;
   margin-top: 12px;
-  
 }
 
+// Panel heading styling
 .panel > div.panel-heading {
   font-family: 'Roboto', sans-serif;
   background-color: rgba(4, 15, 76, 0.70); //blue with 80 opacity
-  // border-radius: 40px;
   color: white;
   border: none;
 }
 
+// Removes anchor default styling
 div.panel-body > a, div.panel-body > ul > a {
   color: white;
   font-family: 'Roboto', sans-serif;
   
-  
+}
+
+// Continuation - Panel body styling
+div.panel-body {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  h5 > small {
+    color: rgb(255, 159, 28);
+  }
+}
+// Hover changes color
+div.panel-body >a > h4:hover {
+  color: #ff9f1c;
+}
+
+// DIRECTORY SHOW CSS
+
+.show-title {
+  font-family: serif;
+  color: white;
+  border-bottom: 8px solid #ff9f1c;
+  border-bottom-style: double;
+  background-color: rgba(4, 15, 76, 0.70);   // 90% pinkish
+  padding: 10px;
+}
+
+// SPECIES SHOW CSS
+
+// Avatar code
+.avatar-element {
+    border: 4px solid white;
+}
+
+// Changes species name color
+div.panel-heading > h4 > small {
+  color: rgb(255, 159, 28);
 }
