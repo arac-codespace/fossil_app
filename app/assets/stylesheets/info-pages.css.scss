@@ -1,7 +1,54 @@
-.info-container {
-    position: relative;
+// margin from heading
+div#info-sidenav {
+  // Space between container and nav tabs
+  padding-left: 0px; 
+  padding-right: 0px;
+  margin-top: 20px;
 }
 
-#section2 {
-    margin-top: 600px;
+// A border below the tabs
+.nav-tabs {
+  border: none;
+  background-color: rgba(4, 15, 76, 0.70);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.nav-tabs > li > a {
+  // No border for no more hover shaking!
+  border: none;
+  color: white;
+}
+
+.nav-tabs > li > a:hover {
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;   
+  background-color: rgba(46, 196, 182, 0.8);
+  padding: 10px 15px;
+}
+
+.nav-tabs > li > a:focus {
+  border: none;
+  background-color: rgba(46, 196, 182, 0.8);
+  padding: 10px 15px;
+
+  
+}
+
+div#info-body {
+  color: #1d2450; //Body blue
+  background-color: rgba(0, 0, 0, 0.36);
+  // Padding for extra space at bottom
+  padding-bottom: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+div.a-well {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.93);
+  padding: 20px;
+  border: 5px solid rgb(255, 159, 28);
+  margin-top: 25px;
 }

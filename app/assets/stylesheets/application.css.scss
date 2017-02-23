@@ -231,6 +231,7 @@ a#menu-toggle > span:hover {
   
   // Sidebar code
   
+  // Sidebar position
   #sidebar-wrapper {
     margin-left: -180px;
   }
@@ -242,8 +243,9 @@ a#menu-toggle > span:hover {
     text-indent: 40px;
   }
   
+  // When expanded, determines space between nav and content
   #wrapper {
-    padding-left: 30px;
+    padding-left: 120px;
   }
   
   #page-content-wrapper {
@@ -258,8 +260,9 @@ a#menu-toggle > span:hover {
     padding-left: 10px;
   }
   
+  // When not expanded, determines spacing between nav and content page.
   #wrapper.active {
-    padding-left: 125px;
+    padding-left: 20px;
   }
 
 }
