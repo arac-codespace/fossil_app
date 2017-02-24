@@ -25,17 +25,17 @@ div#info-sidenav {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;   
   background-color: rgba(46, 196, 182, 0.8);
-  padding: 10px 15px;
+  // padding: 10px 15px;
 }
 
 .nav-tabs > li > a:focus {
   border: none;
   background-color: rgba(46, 196, 182, 0.8);
-  padding: 10px 15px;
+  // padding: 10px 15px;
 
   
 }
-
+// Applies to phylum info as well
 div#info-body {
   color: #1d2450; //Body blue
   background-color: rgba(0, 0, 0, 0.36);
@@ -45,3 +45,18 @@ div#info-body {
   border-bottom-right-radius: 20px;
 }
 
+// PHYLUM INFO PAGE
+
+.nav-tabs > li.active > a {
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;  
+}
+
+.nav-tabs > li.active > a:hover {
+  border: none;
+}
+
+.nav-tabs > li.active > a:focus {
+  border: none;
+}
