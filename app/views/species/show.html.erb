@@ -11,18 +11,19 @@
               
               <div class="panel-heading text-center"><h4> Species Name: <small><%= @fossil.species_name %></small> </h4></div>
               <div class="panel-body text-center">
-                <h5> Age Range: <small><%= @fossil.age_range %> </small> </h5>
-                <h5> Author: <small><%= @fossil.author %> </small> </h5>                
-                <div class = 'avatar-container'>
-                  <%= image_tag @fossil.avatar.url(:medium), class: 'img-responsive center-block avatar-element' %>
+                <div class='a-well'>
+                  <h5> Age Range: <small><%= @fossil.age_range %> </small> </h5>
+                  <h5> Author: <small><%= @fossil.author %> </small> </h5>                
+                  <div class = 'avatar-container'>
+                    <%= image_tag @fossil.avatar.url(:medium), class: 'img-responsive center-block avatar-element' %>
+                  </div>
+                  <h5> Kingdom: <small><%= @fossil.kingdom.kingdom_name %> </small> </h5>
+                  <h5> Phylum: <small><%= @fossil.phylum.phylum_name %></small> </h5>
+                  <h5> Class: <small><%= @fossil.fossil_class.class_name %></small> </h5>
+                  <h5> Order: <small><%= @fossil.order.order_name %></small> </h5>
+                  <h5> Family: <small><%= @fossil.family.family_name %></small> </h5>
+                  <h5> Genus: <small><%= @fossil.genera.genus_name %></small> </h5>
                 </div>
-                <h5> Kingdom: <small><%= @fossil.kingdom.kingdom_name %> </small> </h5>
-                <h5> Phylum: <small><%= @fossil.phylum.phylum_name %></small> </h5>
-                <h5> Class: <small><%= @fossil.fossil_class.class_name %></small> </h5>
-                <h5> Order: <small><%= @fossil.order.order_name %></small> </h5>
-                <h5> Family: <small><%= @fossil.family.family_name %></small> </h5>
-                <h5> Genus: <small><%= @fossil.genera.genus_name %></small> </h5>
-                
               </div> <!-- panel-body end -->
             </div> <!-- panel end -->
           </div> <!-- col end -->  
@@ -32,8 +33,10 @@
         <div class="panel panel-default">
           <div class="panel-heading"><h4 class='text-center'> Remarks & Environmental Interpretation </h4></div>
           <div class="panel-body">
-            <p> <%= @fossil.remarks %></p></br>
-            <p> <%= @fossil.env_int %></p>
+            <div class='a-well'>
+              <p> <%= @fossil.remarks %></p></br>
+              <p> <%= @fossil.env_int %></p>
+            </div>
           </div> <!-- panel-body end-->
         </div> <!-- panel end -->
         

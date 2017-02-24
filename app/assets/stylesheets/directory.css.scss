@@ -62,22 +62,35 @@ span > .btn-default:hover {
 }
 
 // Applies hover color to phylums
-.panel-body > a > h5:hover {
+.panel-body > .a-well > a > h5:hover {
   color: #ff9f1c;
 }
 
 // Applies hover color to phylum subitems
-.panel-body > ul > a > li > h5:hover {
+.panel-body > .a-well > ul > a > li > h5:hover {
   color: #ff9f1c;
 }
 
 // INDEX CSS STYLING - general?
 
+// Foreground well
+div.a-well {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.93);
+  padding: 20px;
+  border: 5px solid rgb(255, 159, 28);
+  margin-top: 25px;
+}
+
 // Full panel styling
 div.panel {
-  background-color: rgba(0, 0, 0, 0.36);
+  background-color: transparent;
   border: none;
   margin-top: 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;  
 }
 
 // Panel heading styling
@@ -86,11 +99,16 @@ div.panel {
   background-color: rgba(4, 15, 76, 0.70); //blue with 80 opacity
   color: white;
   border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-bottom: 2px;
+  padding-top: 2px;  
+  
 }
 
 // Removes anchor default styling
-div.panel-body > a, div.panel-body > ul > a {
-  color: white;
+div.panel-body > .a-well > a, div.panel-body > .a-well > ul > a {
+  color: #1d2450;
   font-family: 'Roboto', sans-serif;
   
 }
@@ -98,6 +116,10 @@ div.panel-body > a, div.panel-body > ul > a {
 // Continuation - Panel body styling
 div.panel-body {
   color: white;
+  background-color: rgba(0, 0, 0, 0.36);
+  padding-top: 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;  
   font-family: 'Roboto', sans-serif;
   h5 > small {
     color: rgb(255, 159, 28);
@@ -119,6 +141,14 @@ div.panel-body >a > h4:hover {
   padding: 10px;
 }
 
+div.description > ul > h5 {
+  color: #1d2450;
+}
+
+.panel-body > .a-well > a > h4:hover {
+  color: #ff9f1c;
+}
+
 // SPECIES SHOW CSS
 
 // Avatar code
@@ -129,4 +159,12 @@ div.panel-body >a > h4:hover {
 // Changes species name color
 div.panel-heading > h4 > small {
   color: rgb(255, 159, 28);
+}
+
+.panel-body > .a-well > h5 {
+  color: #1d2450;
+}
+
+.panel-body > .a-well > p {
+  color: #1d2450;
 }
