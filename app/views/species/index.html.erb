@@ -70,14 +70,14 @@
           <div class="panel-body">        
       
             <% @fossils.each do |x| %>
-            
-              <%= link_to directory_species_path(x.phylum_id, x.id) do%>
-                <h4><%= x.species_name %></h4>
-              <% end %>  
-              <div class = 'description'>
-                <ul><h5>| Kingdom: <small><%= x.kingdom.kingdom_name %></small></h5> <h5>| Phylum: <small><%= x.phylum.phylum_name%></small></h5> <h5>| Class: <small><%= x.fossil_class.class_name %></small></h5> <h5>| Order: <small><%= x.order.order_name %></small></h5> <h5>| Family: <small><%= x.family.family_name %></small></h5><h5> | Genus: <small><%= x.genera.genus_name %></small></h5></ul> </br>
-              </div>                
-                
+              <div class ='a-well'>
+                <%= link_to directory_species_path(x.phylum_id, x.id) do%>
+                  <h4><%= x.species_name %></h4>
+                <% end %>  
+                <div class = 'description'>
+                  <ul><h5>| Kingdom: <small><%= x.kingdom.kingdom_name %></small></h5> <h5>| Phylum: <small><%= x.phylum.phylum_name%></small></h5> <h5>| Class: <small><%= x.fossil_class.class_name %></small></h5> <h5>| Order: <small><%= x.order.order_name %></small></h5> <h5>| Family: <small><%= x.family.family_name %></small></h5><h5> | Genus: <small><%= x.genera.genus_name %></small></h5></ul> </br>
+                </div>                
+              </div>    
             <% end %>
           </div> <!-- panel body end -->
         </div><!-- panel end -->

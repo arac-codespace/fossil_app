@@ -14,9 +14,9 @@ class PagesController < ApplicationController
   add_breadcrumb "General Information"
   end
   
-  def phylum_information
+  def taxonomy_overview
   add_breadcrumb "Home", :root_path
-  add_breadcrumb "Phylum Information"  
+  add_breadcrumb "Taxonomy Overview"  
   end
   
   
