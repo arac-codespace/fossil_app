@@ -85,6 +85,8 @@ order_list = [
 {order_name: "Athyridida", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id},
 {order_name: "Atrypida", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id},
 {order_name: "Rhynchonellida", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id},
+{order_name: "Spiriferida", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id},
+
 
 # Cephalopods
 {order_name: "Belemnitida", kingdom_id: animalia.id, phylum_id: mollusca.id, fossil_class_id: cephalopoda.id},
@@ -130,6 +132,7 @@ pectinida = Order.find_by order_name: 'Pectinida'
 athyridida = Order.find_by order_name: 'Athyridida'
 atrypida = Order.find_by order_name: 'Atrypida'
 rhynchonellida = Order.find_by order_name: 'Rhynchonellida'
+spiriferida = Order.find_by order_name: 'Spiriferida'
 belemnitida = Order.find_by order_name: 'Belemnitida'
 nautilida = Order.find_by order_name: 'Nautilida'
 ammonoidea = Order.find_by order_name: 'Ammonoidea'
@@ -169,7 +172,7 @@ family_list = [
 {family_name: "Athyrididae", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id, order_id: athyridida.id},
 {family_name: "Atrypidae", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id, order_id: atrypida.id},
 {family_name: "Camarotoechiidae", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id, order_id: rhynchonellida.id},
-{family_name: "Spiriferidae", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id, order_id: rhynchonellida.id},
+{family_name: "Spiriferidae", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id, order_id: spiriferida.id},
 
 # Cephalopods
 {family_name: "Belemnitidae", kingdom_id: animalia.id, phylum_id: mollusca.id, fossil_class_id: cephalopoda.id, order_id: belemnitida.id},
@@ -274,7 +277,7 @@ genus_list = [
 {genus_name: "Anathyris", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id, order_id: athyridida.id, family_id: athyrididae.id},
 {genus_name: "Atrypa", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id, order_id: atrypida.id, family_id: atrypidae.id},
 {genus_name: "Camarotoachia", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id, order_id: rhynchonellida.id, family_id: camarotoechiidae.id},
-{genus_name: "Spirifer", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id, order_id: rhynchonellida.id, family_id: spiriferidae.id}, 
+{genus_name: "Spirifer", kingdom_id: animalia.id, phylum_id: brachiopoda.id, fossil_class_id: rhynchonellata.id, order_id: spiriferida.id, family_id: spiriferidae.id}, 
 # fix spirifer to order spiriferida !
 
 # Cephalopods
