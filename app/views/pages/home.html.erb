@@ -17,12 +17,15 @@
           </div>
           
           <div class='row'>
-            <div class = 'col-md-offset-0 col-md-8'>
+            <div class = 'col-md-offset-0 col-md-6'>
               <div class= 'home-buttons'>
-                <button type="button" class="btn btn-primary"><%= link_to "General Information", general_information_path %></button>
-                <button type="button" class="btn btn-primary"><%= link_to "Taxonomy Overview", taxonomy_overview_path %></button>
-                <button type="button" class="btn btn-primary"><%= link_to "Main Directory", directory_index_path %></button>
-                <button type="button" class="btn btn-primary"><%= link_to "All Species", species_index_path %></button>
+                <ul style="list-style-type:none">
+                  <li><button type="button" class="btn btn-primary"><%= link_to "General Information", general_information_path %></button></li>
+                  <li><button type="button" class="btn btn-primary"><%= link_to "Taxonomy Overview", taxonomy_overview_path %></button></li>
+                  <li><button type="button" class="btn btn-primary"><%= link_to "Main Directory", directory_index_path %></button></li>
+                  <li><button type="button" class="btn btn-primary"><%= link_to "All Species", species_index_path %></button></li>
+                  <li><button type="button" class="btn btn-primary"><%= link_to "About", about_path %></button></li>
+                </ul>
               </div>
             </div>
           </div>
