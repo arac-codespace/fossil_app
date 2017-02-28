@@ -76,3 +76,16 @@ div#info-body {
   border: 2px solid #ff9f1c;
   border-radius: 10px;
 }
+
+// Small tag for general info
+#section1 > h2 > small {
+  color: #1d2450; //Body blue
+}
+// About page color
+div.a-well > h4 > strong {
+  color: #1d2450; //Body blue
+}
+
+.tab {
+  text-indent: 40px;
+}

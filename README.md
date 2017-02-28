@@ -1,65 +1,34 @@
 # README
 
-Simple fossil database app.
+Marine Species Fossil Database
 
-For reference...
+The purpose of this website is to serve as a sort of introductory paleontology 
+booklet, where a person can obtain information about some of the major groups 
+of marine phyla as well as a visual reference for a number of species.
 
-Instead of genus, I used genera which rails is able to pluralize as generas.
 
+Coding 
+The hierarchical structure of the taxonomic rank as well as my access to pertaning 
+information made this project ideal for learning and experimenting with relational 
+databases.
 
-This piece of code limits the options with kingdom_id as a condition.
+In this project, the taxonomic models are setup in a way that it allows for the 
+(relatively) easy removal or addition of new taxonomic ranks without messing up 
+the ids.  The models are related to each other, so it's possible to access the 
+attributes of a taxonomic model with any other model as long as it's a child of 
+the target model.  This relationship enables some interesting relational operations, 
+most of which I'm of ignorant of due to inexperience.  Dynamic select forms 
+(refer to Railcasts #88) is an example of what I was able to experiment with thanks 
+to the model relations.  
 
-    <!--<div class = "form-group">-->
-    <!--    <%= f.label :phylum_id %>-->
-    <!--    <%= f.collection_select(:phylum_id, Phylum.where(kingdom_id: 1).to_a, :id, :phylum_name) %>    -->
-    <!--</div>     -->
-    
-This code filters the lower field in accord with its relationship with the first field.
-https://www.youtube.com/watch?v=j1zZ4Lgzf9s
-http://api.rubyonrails.org/classes/ActionView/Helpers/FormOptionsHelper.html
-    
-    <!--<div class = "form-group">-->
-    <!--    <%= f.label :kingdom_id %>-->
-    <!--    <%= f.collection_select(:kingdom_id, Kingdom.order(:kingdom_name), :id, :kingdom_name) %>    -->
-    <!--</div> -->
-    
-    <!--<div class = "form-group">-->
-    <!--    <%= f.label :phylum_id %>-->
-    <!--    <%= f.grouped_collection_select(:phylum_id, Kingdom.order(:kingdom_name), :phylums, :kingdom_name, :id, :phylum_name) %>    -->
-    <!--</div>   -->
-    
-NOTE!  Just running db:seed will NOT run the ruby code in the seeds file and create the records.
+Other than database experimentation, I've also gotten a better understanding of 
+routing and a better sense as to the capabilities of JS/jQuery. I've also created 
+a much less bloated view and controller scaffold compared to my previous project 
+making this project much easier to manage. 
 
-db:create creates the database for the current env
-
-db:create:all creates the databases for all envs
-
-db:drop drops the database for the current env
-
-db:drop:all drops the databases for all envs
-
-db:migrate runs migrations for the current env that have not run yet
-
-db:migrate:up runs one specific migration
-
-db:migrate:down rolls back one specific migration
-
-db:migrate:status shows current migration status
-
-db:rollback rolls back the last migration
-
-db:forward advances the current schema version to the next one
-
-db:seed (only) runs the db/seed.rb file
-
-db:schema:load loads the schema into the current env's database
-
-db:schema:dump dumps the current env's schema (and seems to create the db as well)
-
-db:setup runs db:schema:load, db:seed
-
-db:reset runs db:drop db:setup
-
-db:migrate:redo runs (db:migrate:down db:migrate:up) or (db:rollback db:migrate) depending on the specified migration
-
-db:migrate:reset runs db:drop db:create db:migrate
+If there's something I'd do different on the coding side of this project, it'd be 
+the naming convention that I used for the model attributes and perhaps the routing.  
+All things considered, I'd say I've benefitted greatly from undertaking this 
+project and I'm satisfied with how the site turned out.  Of course, I don't 
+discard changing the website dramatically in the future once I learn new 
+method/techniques.

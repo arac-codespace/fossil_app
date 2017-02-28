@@ -12,13 +12,15 @@
           
           <div class='row'>
             <div class='col-md-offset-0 col-md-6'>  
-              <p class = 'home-subtitle'>Press the menu icon to navigate through the site! </p>
+              <p class = 'home-subtitle'>Press the [<span class='glyphicon glyphicon-menu-hamburger'></span>] icon to navigate through the site! </p>
             </div>
           </div>
           
           <div class='row'>
-            <div class = 'col-md-offset-0 col-md-4'>
+            <div class = 'col-md-offset-0 col-md-8'>
               <div class= 'home-buttons'>
+                <button type="button" class="btn btn-primary"><%= link_to "General Information", general_information_path %></button>
+                <button type="button" class="btn btn-primary"><%= link_to "Taxonomy Overview", taxonomy_overview_path %></button>
                 <button type="button" class="btn btn-primary"><%= link_to "Main Directory", directory_index_path %></button>
                 <button type="button" class="btn btn-primary"><%= link_to "All Species", species_index_path %></button>
               </div>
