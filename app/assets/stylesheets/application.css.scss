@@ -66,6 +66,7 @@ ol.breadcrumb {
   color: #ff9f1c;
 }
 
+
 // SIDEBAR CODE 
 
 // Sidebar menu icon hover
@@ -74,7 +75,7 @@ a#menu-toggle > span:hover {
 }
 
 // Margin when sidebar is active and inactive.
-.row{
+.row {
     margin-left:0px;
     margin-right:0px;
 }
@@ -159,13 +160,6 @@ a#menu-toggle > span:hover {
     text-decoration: none;
     width: 150px;
     background: transparent;
-    // border-top: 1px solid #373737;
-    // border-bottom: 1px solid #1A1A1A;
-    // -webkit-transition: background .5s;
-    // -moz-transition: background .5s;
-    // -o-transition: background .5s;
-    // -ms-transition: background .5s;
-    // transition: background .5s;
 }
 
 .collapse-links li a {
@@ -220,17 +214,13 @@ a#menu-toggle > span:hover {
   padding-right: 20px;
   padding-top: 20px;
 }
-.sub_icon
-{
-  float: right;
-  padding-right: 20px;
-  padding-top: 10px;
-}
+
 
 // GENERAL MEDIA QUERIES
 
 @media only screen and (max-width: 767px) {
-    /* phones */
+  // landscape phones
+    
   //Background image  
   html { 
     background: url('fossil-bg-767px-width.jpg') no-repeat fixed; 
@@ -240,10 +230,9 @@ a#menu-toggle > span:hover {
     background-size: cover;
     background-position: 0% 65%;  
     min-height: 125%;
-    
   }  
   
-  // Sidebar code
+  // SIDEBAR CODE
   
   // Sidebar position
   #sidebar-wrapper {
@@ -259,12 +248,13 @@ a#menu-toggle > span:hover {
     text-indent: 40px;
   }
   
-  // When expanded, determines space between nav and content
   #wrapper {
+    // When expanded, determines space between nav and content
     padding-left: 120px;
     // This fixes the awkward white space from vertical scrolling in chrome
     position: fixed;
     overflow: scroll;
+    // For landscape, this allows elements to occupy full width
     width: 100%;
   }
   
@@ -301,7 +291,7 @@ a#menu-toggle > span:hover {
     
   }
   
-  // Sidebar code
+  // SIDEBAR CODE
   
   // Sidebar position
   #sidebar-wrapper {
@@ -315,8 +305,8 @@ a#menu-toggle > span:hover {
     text-indent: 40px;
   }
   
-  // When expanded, determines space between nav and content
   #wrapper {
+    // When expanded, determines space between nav and content
     padding-left: 120px;
     // This fixes the awkward white space from vertical scrolling in chrome
     position: fixed;
