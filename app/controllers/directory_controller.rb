@@ -21,7 +21,7 @@ class DirectoryController < ApplicationController
 
     
     @q = Fossil.ransack(params[:q])
-    @fossil_s = @q.result.includes(:kingdom, :fossil_class, :order)
+    @fossil_s = @q.result.includes(:kingdom, :phylum, :fossil_class, :order, :family, :genera)
     
     # Phylum param assigned from the index file to url route.  Phylum.id
     @phylum_id = params[:id]

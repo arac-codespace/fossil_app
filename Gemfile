@@ -57,6 +57,9 @@ gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resour
 # Use devise to register users.  Apparently, it needs to be specified for AA to work as of the specified release.
 gem 'devise'
 
+# Use bullet to detect potentially inefficient queries
+gem 'bullet', group: 'development'
+
 
 
 group :development, :test do

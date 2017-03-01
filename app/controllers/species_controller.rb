@@ -21,7 +21,7 @@ class SpeciesController < ApplicationController
   add_breadcrumb "All Species" 
     
     @q = Fossil.ransack(params[:q])
-    @fossils = @q.result.includes(:kingdom)    
+    @fossils = @q.result.includes(:kingdom, :phylum, :fossil_class, :order, :family, :genera)    
     # @fossils = Fossil.all
   end
 
