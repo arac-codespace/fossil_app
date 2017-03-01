@@ -105,7 +105,7 @@ a#menu-toggle > span:hover {
     // Extends navbar vertical div to 100% screen
     height: 100%;
     // Higher stack makes this sidebar be in front of other elements.
-    z-index: 10000;
+    z-index: 5000;
     transition: all .4s ease 0s;
 }
 
@@ -127,6 +127,7 @@ a#menu-toggle > span:hover {
     width: 100%;
     padding-bottom: 50px;
     height: auto;
+  
 }
 // Active class is for JS!
 // When sidebar is active, space between wrapper/body and edge of sidebar...
@@ -219,19 +220,122 @@ a#menu-toggle > span:hover {
   padding-top: 10px;
 }
 
-
 // GENERAL MEDIA QUERIES
 
-@media only screen and (max-width: 500px) {
-  // Background image
+// @media only screen and (max-width: 640px) {
+//   // Background image
+//   html { 
+//     background: url('fossil-bg-md.jpg') no-repeat center center fixed; 
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+//     min-height: 125%;
+//   }
+  
+//   // Sidebar code
+  
+//   // Sidebar position
+//   #sidebar-wrapper {
+//     margin-left: -180px;
+//   }
+  
+//   #sidebar_menu li a, .sidebar-nav li a {
+//     width: 164px;
+//   }
+//   .sidebar-nav li {
+//     text-indent: 40px;
+//   }
+  
+//   // When expanded, determines space between nav and content
+//   #wrapper {
+//     padding-left: 120px;
+//   }
+  
+//   #page-content-wrapper {
+//     width: 105%;
+//   }
+  
+//   div.dropdown {
+//     margin-bottom: 5px;
+//   }
+  
+//   div.page-content {
+//     padding-left: 10px;
+//   }
+  
+//   // When not expanded, determines spacing between nav and content page.
+//   #wrapper.active {
+//     padding-left: 20px;
+//   }
+
+// }
+
+
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+  //Background image  
   html { 
-    // padding-bottom: 125px;
-    background: url('fossil-bg-md.jpg') no-repeat center center fixed; 
+    background: url('fossil-bg-767px-width.jpg') no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     min-height: 125%;
+    background-position: 0% 65%;  
+    
+  }  
+  
+  // Sidebar code
+  
+  // Sidebar position
+  #sidebar-wrapper {
+    margin-left: -180px;
+  }
+  
+  #sidebar_menu li a, .sidebar-nav li a {
+    width: 164px;
+  }
+  .sidebar-nav li {
+    text-indent: 40px;
+  }
+  
+  // When expanded, determines space between nav and content
+  #wrapper {
+    padding-left: 120px;
+  }
+  
+  #page-content-wrapper {
+    width: 100%;
+  }
+  
+  div.dropdown {
+    margin-bottom: 5px;
+  }
+  
+  div.page-content {
+    padding-left: 10px;
+  }
+  
+  // When not expanded, determines spacing between nav and content page.
+  #wrapper.active {
+    padding-left: 20px;
+  }  
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    
+  // Background image
+  html { 
+    background: url('fossil-bg-md.jpg') no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 125%;
+    background-position: 75% 0%;  
   }
   
   // Sidebar code
@@ -254,7 +358,7 @@ a#menu-toggle > span:hover {
   }
   
   #page-content-wrapper {
-    width: 105%;
+    width: 100%;
   }
   
   div.dropdown {

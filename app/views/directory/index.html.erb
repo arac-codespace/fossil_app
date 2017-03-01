@@ -14,7 +14,7 @@
                 <% if x.kingdom_id == @animalia.id %>
                   <!--Link to a show page where all the species share the same phylum_id -->
                   <%= link_to directory_path(x.id) do %>
-                    <h5><strong><%= x.phylum_name %></strong></h5>
+                    <h5>Phylum: <strong><%= x.phylum_name %></strong></h5>
                   <% end %>  
                   <ul  style="list-style: none;">
                     <% @classes.each do |z| %>
@@ -23,7 +23,7 @@
                       <%= link_to directory_path(x.id, class_var: "#{z.class_name}") do %>
                         <% if z.phylum_id == x.id %>
                           <li> <h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                           <%= z.class_name %> </h5> </li>
+                           Class: <%= z.class_name %> </h5> </li>
                         <% end %>
                       <% end %>  
                     <% end %>
@@ -42,7 +42,7 @@
               <!-- If the phylum records have the dynamic id of Protozoa...-->
                 <% if x.kingdom_id == @protozoa.id %>
                   <%= link_to directory_path(x.id) do %>
-                    <h5><strong><%= x.phylum_name %></strong></h5>
+                    <h5> Phylum: <strong><%= x.phylum_name %></strong></h5>
                   <% end %>  
                   
                   <ul  style="list-style: none;">
@@ -52,7 +52,7 @@
                       <%= link_to directory_path(x.id, class_var: "#{z.class_name}") do %>
                         <% if z.phylum_id == x.id %>
                           <li> <h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                          <%= z.class_name %> </h5> </li>
+                          Class: <%= z.class_name %> </h5> </li>
                         <% end %>  
                       <% end %>
                     <% end %>
