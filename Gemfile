@@ -60,6 +60,8 @@ gem 'devise'
 # Use bullet to detect potentially inefficient queries
 gem 'bullet', group: 'development'
 
+# Use for amazon image storage
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development, :test do
