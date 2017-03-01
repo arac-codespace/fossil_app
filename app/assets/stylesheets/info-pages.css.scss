@@ -7,20 +7,20 @@ div#info-sidenav {
 }
 
 // A border below the tabs
-.nav-tabs {
+ul.nav-tabs {
   border: none;
   background-color: rgba(4, 15, 76, 0.70);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.nav-tabs > li > a {
+ul.nav-tabs > li > a {
   // No border for no more hover shaking!
   border: none;
   color: white;
 }
 
-.nav-tabs > li > a:hover {
+ul.nav-tabs > li > a:hover {
   border: none;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;   
@@ -28,7 +28,7 @@ div#info-sidenav {
   // padding: 10px 15px;
 }
 
-.nav-tabs > li > a:focus {
+ul.nav-tabs > li > a:focus {
   border: none;
   background-color: rgba(46, 196, 182, 0.8);
   // padding: 10px 15px;
