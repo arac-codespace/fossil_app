@@ -16,8 +16,6 @@ Rails.application.routes.draw do
   
   resources :species, only: [:index]
   
-  resources :fossils, except: [:index, :show]
-  
   
   # Redirects users who enter a wrong route path.  Will disable while in development...
   # match '*path' => redirect('/'), via: :get
