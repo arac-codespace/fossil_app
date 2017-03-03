@@ -29,21 +29,25 @@ making this project much easier to manage.
 
 If there's something I'd do different on the coding side of this project, it'd be 
 the naming convention that I used for the model attributes and perhaps the routing.
+Another thing that I might consider doing in the near future is to add some form of
+environment id tag in order to allow the database to be sortable and searchable by
+environment type.
+
 If the 'database' part of the site had more entries, I'd also consider individualizing
 the taxonomic ranks, perhaps dedicating an entire route to display the children
-of a single rank and corresponding species (similar to how PaleoDB is setup).  
-Due to the limited numbers of entries at present (49 species) though,
-doing so would result in barely populated pages.
+of a single rank and corresponding species (similar to how PaleoDB/WoRMS is setup).  
+Due to the limited numbers of entries at present (around 40 species) though,
+doing so would result in barely populated pages. 
 
 
 All things considered, I'd say I've benefitted greatly from undertaking this 
-project and I'm satisfied with how the site turned out.  Of course, I'll most likely 
-be changing or perhaps even recreating the website in the future once I learn a 
-sufficient number of new method/techniques.
+project and I'm satisfied with how the site turned out for the most part.  
+Of course, I'll most likely be changing or perhaps even recreating the website in 
+the future once I learn a sufficient number of new technologies/techniques.
 
 
-As for any future projects, I intend on experimenting with jQuery and interactive 
-images next and continue working under the Rails framework in order to solidify
-my fundamentals.  I'm quite interested in single-web-applications so AngularJS
-is on my radar.  Learning Python and working on desktop applications has 
-always been a goal of mine, so that's also on the radar. 
+As for near future projects, I intend on experimenting with jQuery and interactive 
+images next and continue working under the Rails framework for the foreseeable future.
+This project also made it clear that I should at the very least gain some proficiency 
+in a SQL GUI asap.  I did 'learn' how to access my production db dump with pgAdmin, but
+I must admit that the whole thing wasn't too pretty.  
