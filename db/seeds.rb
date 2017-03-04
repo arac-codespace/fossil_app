@@ -321,4 +321,14 @@ genus_list = [
 
 genus_list.each do |x|
   Genera.create x
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 end
