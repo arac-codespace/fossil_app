@@ -34,8 +34,8 @@
           <div class="panel-heading"><h4 class='text-center'> Remarks </h4></div>
           <div class="panel-body">
             <div class='a-well'>
-              <p> <%= @fossil.remarks %></p></br>
-              <p> <%= @fossil.env_int %></p>
+              <%= simple_format(@fossil.remarks) %>
+              <%= simple_format(@fossil.env_int) %>
             </div>
           </div> <!-- panel-body end-->
         </div> <!-- panel end -->
