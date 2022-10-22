@@ -81,7 +81,11 @@ gem 'bullet', group: 'development'
 gem 'aws-sdk'
 
 # Migrations issues, terminal suggested adding this to avoid polling for changes...
-gem 'wdm'
+# This is a WINDOWS Gem That don't play well with nix
+platforms :mswin do 
+  gem "wdm", :group => [:development, :test]
+end
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
