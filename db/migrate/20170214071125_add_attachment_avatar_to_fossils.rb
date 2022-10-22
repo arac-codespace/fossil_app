@@ -1,4 +1,4 @@
-class AddAttachmentAvatarToFossils < ActiveRecord::Migration
+class AddAttachmentAvatarToFossils < ActiveRecord::Migration[5.0]
   def self.up
     change_table :fossils do |t|
       t.attachment :avatar

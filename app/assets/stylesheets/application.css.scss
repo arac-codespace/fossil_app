@@ -14,11 +14,11 @@
  *= require_directory .
  */
  
-@import 'bootstrap-sprockets';
 @import 'bootstrap';
-@import "font-awesome-sprockets";
-@import "font-awesome";
+@import 'bootstrap-sprockets';
 
+@import "font-awesome";
+// @import "font-awesome-sprockets";
 
 
 // GENERAL STYLING

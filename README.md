@@ -7,7 +7,11 @@ booklet, where a person can obtain information about some of the major groups
 of marine phyla as well as a visual reference for a number of species.
 
 
-Coding 
+# Update
+(2022-10-21) - Migrated this app to Rails 7 and changed some settings in the host site.  There were a bunch of deprecated gems which I had to replace, hopefully I won't have to do this again in the near future...  I was unable to solve the font awesome sprockets issue, still the page should work...
+
+
+# Coding 
 
 The hierarchical structure of the taxonomic rank as well as my access to pertaning 
 information made this project ideal for learning and experimenting with relational 
